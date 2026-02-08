@@ -1,0 +1,1052 @@
+*{
+}
+
+    :root{
+    --primary:#556B2F;      /* olive green */
+    --secondary:#C6A769;    /* soft gold */
+    --light:#F5F5F0;        /* cream */
+    --dark:#2F2F2F;
+}
+}
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'inter', sans-serif;
+    h1, h2, h3{
+    font-family: 'Playfair Display', serif;
+}
+body{
+    background:rgba(33, 170, 113, 0.836)))a(16, 92, 39, 0.425)a(16, 92, 39, 0.425)a(16, 92, 39, 0.425)a(16, 92, 39, 0.425)a(16, 92, 39, 0.425)a(16, 92, 39, 0.425)a(16, 92, 39, 0.425);
+}
+
+}
+
+body{
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    background:rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+
+    border-bottom:1px solid #eee;
+    position:sticky;
+    top:0;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    background:url('images/sidemen-rice.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+}
+.hero{
+  height: 90vh;
+  background: url("images/sidemen.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-text{
+  background: rgba(0,0,0,0.4); /* bikin tulisan kebaca */
+  color:white;
+  padding:20px 40px;
+  border-radius:10px;
+}
+
+
+}
+
+.cta{
+    display:inline-block;
+    margin-top:25px;
+    padding:16px 34px;
+    background:#1f7a63;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.cta:hover{
+    background:#145c49;
+}
+
+}
+
+.tour-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+.tour-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.tour-card:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#1f7a63;
+}
+
+.tour-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+}
+
+}
+
+.about{
+    background:#f2f5f4;
+    padding:120px 0;
+    text-align:center;
+}
+
+}
+
+.contact{
+    text-align:center;
+    padding:80px 0;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111;
+    color:white;
+}
+section{
+    padding:100px 0;
+}
+.logo{
+    letter-spacing:2px;
+}
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:16px;
+  .slider{
+  width:100%;
+  overflow:hidden;
+}
+
+.slides{
+  display:flex;
+  animation: slide 12s infinite;
+}
+
+.slides img{
+  width:100%;
+}
+
+@keyframes slide{
+  0%{transform:translateX(0);}
+  33%{transform:translateX(-100%);}
+  66%{transform:translateX(-200%);}
+}
+  
+}
+/* FLOATING WHATSAPP LUXURY */
+
+.floating-wa{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    background:#556B2F; /* olive */
+    color:white;
+
+    padding:12px 18px;
+    border-radius:50px;
+
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+
+    z-index:999;
+}
+
+/* hover mahal */
+.floating-wa:hover{
+    background:#C6A769; /* gold */
+    transform:translateY(-3px);
+}
+
+/* ==============================
+   REVIEW SECTION (ULTRA LUXURY)
+============================== */
+
+.review-section{
+    padding:110px 8%;
+    background:#f4f7f2;
+    text-align:center;
+}
+
+.review-title{
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+/* BOX */
+.review-box{
+    max-width:750px;
+    margin:auto;
+    background:white;
+    padding:60px 50px;
+    border-radius:22px;
+
+    /* deeper luxury shadow */
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.08),
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+.review-text{
+    font-size:20px;
+    font-style:italic;
+    line-height:1.7;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.review-name{
+    font-weight:700;
+    margin-bottom:18px;
+    transition:.4s;
+}
+
+/* ⭐ ULTRA GOLD STARS */
+.stars{
+    font-size:26px;
+    margin-bottom:35px;
+
+    background:linear-gradient(45deg,#D4AF37,#FFD700,#F7E27E);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 2px 6px rgba(212,175,55,0.4),
+        0 0 12px rgba(255,215,0,0.6);
+}
+
+
+/* BUTTONS LAYOUT */
+.review-buttons{
+    display:flex;
+    gap:18px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* BASE BUTTON */
+.btn-review{
+    padding:16px 34px;
+    border-radius:14px;
+    font-weight:700;
+    text-decoration:none;
+    transition:.35s;
+    position:relative;
+
+    /* makes button look raised */
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* GOLD BUTTON (PRIMARY) */
+.gold{
+    background:linear-gradient(135deg,#D4AF37,#C5A028);
+    color:white;
+}
+
+/* hover = lift */
+.gold:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(197,160,40,0.45);
+}
+
+/* click feel */
+.gold:active{
+    transform:translateY(-2px);
+}
+
+
+/* GHOST LUXURY BUTTON */
+.ghost{
+    border:2px solid #D4AF37;
+    color:#b8962e;
+    background:white;
+}
+
+/* hover */
+.ghost:hover{
+    background:#D4AF37;
+    color:white;
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(212,175,55,0.35);
+}
+
+}
+/* GALLERY LUXURY SLIDER */
+
+.gallery{
+    padding:80px 20px;
+    background:#f7f7f7;
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.slider{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.slides{
+    display:flex;
+    width:400%;
+    animation:slide 16s infinite;
+}
+
+.slides img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+/* AUTO SLIDE */
+@keyframes slide{
+
+    0%{margin-left:0;}
+    20%{margin-left:0;}
+
+    25%{margin-left:-100%;}
+    45%{margin-left:-100%;}
+
+    50%{margin-left:-200%;}
+    70%{margin-left:-200%;}
+
+    75%{margin-left:-300%;}
+    95%{margin-left:-300%;}
+}
+/* TESTIMONIAL LUXURY */
+
+.testimonials{
+    padding:80px 20px;
+    background:white;
+    text-align:center;
+}
+
+.testimonial-slider{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    overflow:hidden;
+}
+
+.testimonial-track{
+    display:flex;
+    width:400%;
+    animation:testislide 18s infinite;
+}
+
+.testimonial{
+    width:100%;
+    padding:40px;
+    font-size:20px;
+    line-height:1.6;
+}
+
+@keyframes testislide{
+
+    0%{margin-left:0;}
+    20%{margin-left:0;}
+
+    25%{margin-left:-100%;}
+    45%{margin-left:-100%;}
+
+    50%{margin-left:-200%;}
+    70%{margin-left:-200%;}
+
+    75%{margin-left:-300%;}
+    95%{margin-left:-300%;}
+}
+/* TRUST BUILDER LUXURY */
+
+.trust{
+    display:flex;
+    flex-direction:column; /* bikin ke bawah */
+    align-items:center;
+    gap:20px;
+    margin-top:40px;
+}
+
+.trust-item{
+    background:white;
+    padding:18px 28px;
+    border-radius:12px;
+    width:320px;
+    text-align:center;
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+
+.trust-item:hover{
+    transform:translateY(-5px);
+}/* TOUR SECTION */
+
+.tours{
+    padding:100px 40px;
+    background:#F5F5F0;
+    text-align:center;
+}
+
+.tours h2{
+    font-size:36px;
+}
+
+.tour-sub{
+    color:#777;
+    margin-bottom:60px;
+}
+
+/* GRID */
+
+.tour-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:40px;
+}
+
+/* CARD */
+
+.tour-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.06);
+    transition:0.4s;
+    position:relative;
+}
+
+.tour-card:hover{
+    transform:translateY(-12px);
+}
+
+/* IMAGE */
+
+.tour-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+/* INFO */
+
+.tour-info{
+    padding:25px;
+    text-align:left;
+}
+
+.tour-info h3{
+    margin-bottom:10px;
+}
+
+.tour-info p{
+    color:#666;
+    font-size:15px;
+}
+
+/* PRICE + BUTTON */
+
+.tour-bottom{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.price{
+    font-weight:700;
+    color:#556B2F;
+}
+
+/* BUTTON */
+
+.book-btn{
+    background:#556B2F;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    background:#C6A769;
+}
+
+/* BADGE */
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#C6A769;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+/* ULTRA TOUR */
+
+.tours{
+    padding:120px 40px;
+    background:#F5F5F0;
+    text-align:center;
+}
+
+.tour-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:50px;
+}
+
+/* CARD */
+
+.tour-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,0.06);
+    transition:0.4s;
+}
+
+.tour-card:hover{
+    transform:translateY(-15px);
+}
+
+/* IMAGE */
+
+.tour-image{
+    position:relative;
+}
+
+.tour-image img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+/* BADGES */
+
+.tour-badges{
+    position:absolute;
+    top:15px;
+    left:15px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.tour-badges span{
+    background:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* INFO */
+
+.tour-info{
+    padding:28px;
+    text-align:left;
+}
+
+.price{
+    font-size:20px;
+    font-weight:700;
+    color:#556B2F;
+}
+
+.per{
+    font-size:13px;
+    color:#777;
+}
+
+/* BUTTON */
+
+.book-btn{
+    background:#556B2F;
+    color:white;
+    padding:12px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    background:#C6A769;
+}
+/* HERO */
+
+.experience-hero{
+    height:70vh;
+    background-image:url("images/sidemen-ricefield-experience.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.hero-overlay{
+    background:rgba(0,0,0,0.45);
+    color:white;
+    text-align:center;
+    padding:60px;
+    border-radius:20px;
+}
+
+.hero-overlay h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+
+/* INTRO */
+
+.intro{
+    max-width:900px;
+    margin:auto;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.intro h2{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+
+
+/* CARDS */
+
+.experience-section{
+    padding:80px 20px;
+    background:#f6f8f5;
+}
+
+.section-title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:60px;
+}
+
+.card-container{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+
+.experience-card{
+    background:white;
+    padding:40px;
+    width:320px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    position:relative;
+    transition:0.4s;
+}
+
+.experience-card:hover{
+    transform:translateY(-12px);
+}
+
+
+/* FEATURED CARD */
+
+.featured{
+    transform:scale(1.05);
+    border:2px solid #c6a76d;
+}
+
+.badge{
+    position:absolute;
+    top:-12px;
+    right:20px;
+    background:#c6a76d;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+
+/* PRICE */
+
+.price{
+    font-size:22px;
+    margin:20px 0;
+    color:#2f3e2c;
+}
+
+.info{
+    font-size:14px;
+    opacity:0.7;
+}
+
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 26px;
+    background:#2f3e2c;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#c6a76d;
+}
+
+
+
+/* TRUST */
+
+.trust{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.trust-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+/* ================================
+   ADDITIONAL SERVICES STYLE
+================================ */
+
+.experience-section{
+    padding:100px 8%;
+    background:#f9fbf8;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:70px;
+    font-weight:700;
+    letter-spacing:-0.5px;
+}
+
+/* CARD CONTAINER */
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+/* CARD */
+.experience-card{
+    background:#ffffff;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.06);
+    transition:0.35s;
+    position:relative;
+}
+
+/* HOVER EFFECT — terlihat mahal */
+.experience-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 60px rgba(0,0,0,0.1);
+}
+
+/* FEATURED CARD */
+.experience-card.featured{
+    border:2px solid #2f6f4f;
+}
+
+/* BADGE */
+.badge{
+    position:absolute;
+    top:-12px;
+    right:25px;
+    background:#2f6f4f;
+    color:white;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* TITLE */
+.experience-card h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+/* TEXT */
+.experience-card p{
+    opacity:0.75;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+/* INFO */
+.info{
+    font-size:14px;
+    margin-bottom:18px;
+    opacity:0.8;
+}
+
+/* PRICE */
+.price{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    background:#2f6f4f;
+    color:white;
+    padding:14px 26px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+/* BUTTON HOVER */
+.btn:hover{
+    background:#214f38;
+}
+
+/* NOTE */
+.experience-section p strong{
+    color:#2f6f4f;
+}/* ==============================
+   PAYPAL SECTION
+============================== */
+
+.payment-section{
+    padding:100px 8%;
+    background:linear-gradient(135deg,#f8faf7,#eef3ec);
+    text-align:center;
+}
+
+.payment-box{
+    max-width:720px;
+    margin:auto;
+    background:white;
+    padding:60px;
+    border-radius:24px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.07),
+        0 10px 30px rgba(0,0,0,0.05);
+}
+
+.payment-box h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.payment-box p{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+/* PAYPAL BUTTON */
+.paypal-btn{
+    display:inline-block;
+    padding:18px 42px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:18px;
+    color:white;
+
+    background:linear-gradient(135deg,#0070ba,#003087);
+
+    box-shadow:0 12px 30px rgba(0,48,135,0.35);
+    transition:.35s;
+}
+
+/* hover naik */
+.paypal-btn:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,48,135,0.45);
+}
+
+/* click feel */
+.paypal-btn:active{
+    transform:translateY(-2px);
+}
+
+.payment-note{
+    display:block;
+    margin-top:18px;
+    color:#777;
+    font-size:14px;
+}
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+.logo img{
+    height:48px;
+    width:auto;
+}
+nav{
+    display:flex;
+    gap:34px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#c6a55c; /* gold hover */
+}
+.hamburger{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+@media(max-width:768px){
+
+    nav{
+        position:absolute;
+        top:75px;
+        right:0;
+        background:white;
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+
+        max-height:0;
+        overflow:hidden;
+
+        transition:.4s;
+        box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    nav.active{
+        max-height:320px;
+        padding:20px 0;
+    }
+
+    .hamburger{
+        display:block;
+    }
+}
+@media(max-width:768px){
+
+nav{
+    display:none;
+}
+
+nav.active{
+    display:flex;
+    flex-direction:column;
+}
+
+.hamburger{
+    display:block;
+}
+
+}
+
