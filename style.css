@@ -119,6 +119,25 @@ nav a{
     position:relative;
     overflow:hidden;
 }
+.tour-card{
+    position: relative;
+}
+
+.card-link{
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+}
+.tour-card{
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tour-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
 
 .tour-card:before{
     content:"";
@@ -1196,4 +1215,200 @@ nav.active{
     padding:6px 12px;
     border-radius:20px;
     font-size:12px;
+}
+/* GLOBAL */
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    margin:0;
+    background:#f4f6f5;
+    color:#333;
+}
+
+/* ================= HERO ================= */
+
+.hero-spiritual{
+    height:80vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/purification-lead-by-local-priest.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-spiritual h1{
+    font-size:52px;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+.hero-spiritual p{
+    font-size:20px;
+    opacity:0.95;
+}
+
+/* ================= CONTAINER ================= */
+
+.tour-container{
+    max-width:1150px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.subtitle{
+    text-align:center;
+    max-width:720px;
+    margin:auto;
+    margin-bottom:60px;
+    color:#666;
+    font-size:18px;
+}
+
+/* ================= GRID ================= */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+/* ================= CARD ================= */
+
+.tour-card{
+    position:relative;
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    transition:0.35s;
+}
+
+.tour-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 45px rgba(0,0,0,0.12);
+}
+
+.tour-card h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+/* ================= BADGE ================= */
+
+.badge{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:#c6a769;
+    color:white;
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.6px;
+}
+
+.tour-card.popular{
+    border:2px solid #c6a769;
+}
+
+/* ================= PRICE ================= */
+
+.price{
+    font-size:24px;
+    font-weight:bold;
+    color:#1a7f5a;
+    margin:18px 0;
+}
+
+/* ================= LIST ================= */
+
+ul{
+    padding-left:20px;
+    line-height:1.8;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.center{
+    text-align:center;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:80px;
+    text-decoration:none;
+    background:#1a7f5a;
+    color:white;
+    padding:16px 34px;
+    border-radius:12px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#14664a;
+    transform:translateY(-3px);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.hero-spiritual{
+    height:65vh;
+}
+
+.hero-spiritual h1{
+    font-size:34px;
+}
+
+.hero-spiritual p{
+    font-size:17px;
+}
+
+.tour-container{
+    padding:60px 18px;
+}
+/* SECTION BLOCK */
+
+.experience-section{
+    background:white;
+    margin-top:-80px; /* naik sedikit ke hero = terlihat mahal */
+    border-radius:30px 30px 0 0;
+    padding-top:60px;
+    box-shadow:0 -10px 40px rgba(0,0,0,0.05);
+}
+
+}
+/* CTA BUTTON */
+
+.cta-btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#1a7f5a;
+    color:white;
+    padding:14px 26px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.cta-btn:hover{
+    background:#14664a;
+    transform:translateY(-3px);
 }
