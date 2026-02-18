@@ -1412,3 +1412,199 @@ ul{
     background:#14664a;
     transform:translateY(-3px);
 }
+/* =========================
+   Reset & Base Styles
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+    width: 100%;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #f27a1a;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.lunch-hero {
+    position: relative;
+    height: 60vh;
+    background: url('authentic-local-lunch.html') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-overlay .back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f27a1a;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-overlay .back-btn:hover {
+    background: #d96b13;
+}
+
+/* =========================
+   CONTENT SECTION
+========================= */
+.lunch-content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.lunch-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f27a1a;
+}
+
+.lunch-content h3 {
+    font-size: 1.5rem;
+    margin: 25px 0 10px;
+    color: #333;
+}
+
+.lunch-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #f27a1a;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #d96b13;
+}
+
+/* SECONDARY BUTTON */
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #fff;
+    border: 2px solid #f27a1a;
+    color: #f27a1a;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: #f27a1a;
+    color: #fff;
+}
+
+/* =========================
+   FLOATING WHATSAPP BUTTON
+========================= */
+.floating-wa {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.floating-wa:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    .lunch-content h2 {
+        font-size: 1.7rem;
+    }
+}
