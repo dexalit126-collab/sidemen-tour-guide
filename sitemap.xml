@@ -21,21 +21,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Rice Field Trekking -->
-  <url>
-    <loc>https://sidementourguide.com/sidemen-rice-field-trekking</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Culture & Spiritual Tours -->
-  <url>
-    <loc>https://sidementourguide.com/culture-spiritual-tours-sidemen</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
   <!-- Transport & Scooter Rental -->
   <url>
