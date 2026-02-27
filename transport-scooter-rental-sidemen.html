@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="style.css">       <!-- CSS global lama -->
 <link rel="stylesheet" href="lunch.css">       <!-- CSS halaman lunch lama -->
 <link rel="stylesheet" href="desktop-fix.css"> <!-- CSS mini baru -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -230,3 +231,51 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </section>
 
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>© 2026 Sidemen Tour Guide</p>
+        <p>Authentic Experiences in Sidemen, Bali</p>
+    </div>
+</footer>
+
+
+
+<!-- ===== PREMIUM FLOATING SOCIAL ===== -->
+<div class="floating-social" id="floatingSocial">
+    <a href="https://www.facebook.com/share/1WRZNWvkbR/" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/sidementourguide/" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@sidementourguide?_r=1&_t=ZS-94Evxddk72O" target="_blank">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.tripadvisor.co.id/Attraction_Review-g608495-d33266654-Reviews-Sidemen_tour_guide-Sidemen_Karangasem_Bali.html" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" width="20">
+</a>
+</div>
+
+
+<script>
+let lastScroll = 0;
+const bottomNav = document.getElementById("bottomNav");
+const floatingSocial = document.getElementById("floatingSocial");
+
+window.addEventListener("scroll", () => {
+    let currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+        bottomNav.classList.add("hide-nav");
+        floatingSocial.classList.add("hide-nav");
+    } else {
+        bottomNav.classList.remove("hide-nav");
+        floatingSocial.classList.remove("hide-nav");
+    }
+
+    lastScroll = currentScroll;
+});
+</script>
+
+</body>
+</html>
