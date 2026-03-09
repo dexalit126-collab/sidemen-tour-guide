@@ -55,42 +55,36 @@ aria-label="Chat on WhatsApp">
     </div>
 </header>
 <!-- ABOUT -->
-
 <section id="about" class="about">
 
-    <div class="container">
+<div class="container">
 
-        <h2>Local. Personal. Authentic.</h2>
+<h2>Local. Personal. Authentic.</h2>
 
-        <p>Sidemen Tour Guide is proudly locally owned and operated. Born and raised in the Sidemen valley, we specialize in meaningful travel experiences that connect you with the real Bali — far from the crowds.</p>
+<p>
+Sidemen Tour Guide is proudly locally owned and operated. Born and raised in the Sidemen valley, we specialize in meaningful travel experiences that connect you with the real Bali — far from the crowds.
+</p>
 
-    </div>
+<p>
+Our tours are designed to help travelers explore the beauty of Sidemen through rice fields, traditional villages, local farming life, and Balinese culture. Every experience is guided personally to ensure a relaxed, authentic, and memorable journey.
+</p>
+
+<p>
+Whether you want to walk through the rice terraces, learn about local agriculture, or experience Balinese spiritual traditions, we are happy to share the true spirit of Sidemen with you.
+</p>
+
+<div class="about-highlights">
+
+<p>✔ Local guide born in Sidemen</p>
+<p>✔ Small group & private experiences</p>
+<p>✔ Authentic culture & nature tours</p>
+
+</div>
+</div>
 
 </section>
-</section>
-<!-- PAYMENT SECTION -->
 
-<section class="payment-section">
 
-    <div class="payment-box">
-
-        <h2>Secure Your Booking</h2>
-
-        <p>
-        Ready to explore Sidemen with us?  
-        You can secure your tour by sending a deposit or full payment via PayPal.
-        Safe, easy, and trusted worldwide.
-        </p>
-
-        <a href="https://paypal.me/sidementourguide" target="_blank" class="paypal-btn">
-            Pay with PayPal
-        </a>
-
-        <span class="payment-note">
-        *Please contact us before making a payment to confirm availability.
-        </span>
-
-    </div>
 
 <footer class="main-footer">
     <div class="footer-content">
@@ -114,21 +108,32 @@ aria-label="Chat on WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" width="20">
 </a>
 </div>
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h2 id="tourTitle"></h2>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="date" id="date" required>
+    <input type="number" id="people" placeholder="Number of People" value="1" min="1">
 
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav");
+    <input type="text" id="hotel" placeholder="Hotel Name (if pickup needed)">
+    <input type="time" id="pickupTime" placeholder="Pickup Time">
 
-    if(hamburger && navMenu){
-        hamburger.addEventListener("click", function(){
-            navMenu.classList.toggle("active");
-        });
-    }
+    <select id="paymentType">
+      <option value="deposit">Deposit 50%</option>
+      <option value="full">Full Payment</option>
+    </select>
 
-});
-</script>
+    <p id="totalPrice"></p>
+
+    <button id="payNow">Proceed to Payment</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
 
 </body>
 </html>

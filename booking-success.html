@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Booking Confirmed - Sidemen Tour Guide</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.success-box{
+    max-width:600px;
+    margin:100px auto;
+    padding:30px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+.success-box h1{
+    text-align:center;
+}
+.success-details p{
+    margin:8px 0;
+}
+</style>
+</head>
+<body>
+
+<div class="success-box">
+    <h1>Booking Received 🙏</h1>
+    <p style="text-align:center;">Please complete your PayPal payment.</p>
+
+    <div class="success-details" id="bookingDetails">
+    </div>
+
+    <hr>
+
+    <h3>Contact Us</h3>
+    <p>WhatsApp: +6281936557957</p>
+    <p>Email: dexalit126@gmail.com</p>
+    <div id="paypal-button"></div>
+  
+  
+    
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("bookingData"));
+
+if(data){
+    document.getElementById("bookingDetails").innerHTML = `
+        <p><strong>Name:</strong> ${data.customer_name}</p>
+        <p><strong>Tour:</strong> ${data.tour}</p>
+        <p><strong>Date:</strong> ${data.date}</p>
+        <p><strong>People:</strong> ${data.people}</p>
+        <p><strong>Hotel:</strong> ${data.hotel}</p>
+        <p><strong>Pickup Time:</strong> ${data.pickup_time}</p>
+        <p><strong>Payment Type:</strong> ${data.payment}</p>
+        <p><strong>Total Paid:</strong> $${data.amount}</p>
+    `;
+}
+</script>
+<script src="https://www.paypal.com/sdk/js?client-id=AUuw8sUYCc6GHZ_hWncLoYuhdULBjRCoU4HJkLS79DaMS1UsJsOFcIx7PBZI_dXpHCO1d2vitpuXy9ei&currency=USD"></script>
+
+<script>
+paypal.Buttons({
+  createOrder: function(data, actions) {
+    const bookingData = JSON.parse(localStorage.getItem("bookingData"));
+    
+    return actions.order.create({
+      purchase_units: [{
+        amount: {
+          value: bookingData.amount
+        }
+      }]
+    });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      alert("Payment completed by " + details.payer.name.given_name);
+      localStorage.removeItem("bookingData");
+      window.location.href = "thank-you.html?type=activity";
+    });
+  }
+  
+}).render('#paypal-button');
+</script>
+
+</body>
+</html>

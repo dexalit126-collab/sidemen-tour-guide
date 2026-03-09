@@ -82,7 +82,7 @@ target="_blank">
             ✈ Airport Transfer<br>
             <span>1.5 – 2 hours</span>
         </div>
-        <div class="ride-price">IDR 550K (~$35)</div>
+        <div class="ride-price">IDR 500K (~$31)</div>
     </div>
 
     <div class="ride-destination">
@@ -90,7 +90,7 @@ target="_blank">
             🌊 Uluwatu<br>
             <span>2.5 – 3 hours</span>
         </div>
-        <div class="ride-price">IDR 650K (~$41)</div>
+        <div class="ride-price">IDR 600K (~$39)</div>
     </div>
 
     <div class="ride-destination">
@@ -98,7 +98,7 @@ target="_blank">
             🌿 Ubud<br>
             <span>1 – 1.5 hours</span>
         </div>
-        <div class="ride-price">IDR 450K (~$28)</div>
+        <div class="ride-price">IDR 400K (~$25)</div>
     </div>
 
     <div class="ride-destination">
@@ -106,7 +106,7 @@ target="_blank">
             🏝 Amed<br>
             <span>1.5 hours</span>
         </div>
-        <div class="ride-price">IDR 450K (~$28)</div>
+        <div class="ride-price">IDR 400K (~$25)</div>
     </div>
 
     <div class="ride-destination">
@@ -114,7 +114,7 @@ target="_blank">
             ⛴ Padangbai Harbour<br>
             <span>45 – 60 minutes</span>
         </div>
-        <div class="ride-price">IDR 325K (~$21)</div>
+        <div class="ride-price">IDR 300K (~$19)</div>
     </div>
 
     <div style="margin-top:25px; font-size:14px; opacity:0.8;">
@@ -126,13 +126,11 @@ target="_blank">
         Travel time may vary depending on traffic conditions.
     </div>
 
-    <a href="https://wa.me/6281936557957?text=Hello%20Sidemen%20Ride%20🚗%0A%0AName:%20%0APickup%20Location:%20%0ADestination:%20%0ADate:%20%0ATime:%20%0ANumber%20of%20Passengers:%20"
-    class="ride-cta">
-        🚗 Book My Ride
-    </a>
-
-</div>
-
+    <button id="openRideBooking" class="ride-cta" style="margin-top:25px;">
+🚗 Book Transport
+</button>
+    
+</section>
 
 
 <section class="scooter-section">
@@ -187,49 +185,8 @@ and responsive service to ensure your Bali journey is smooth and enjoyable.
 
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav");
-
-    if(hamburger){
-        hamburger.addEventListener("click", function(){
-            navMenu.classList.toggle("active");
-        });
-    }
-
-});
-</script>
 
 
-</body>
-</html>
-<!-- PAYMENT SECTION -->
-
-<section class="payment-section">
-
-    <div class="payment-box">
-
-        <h2>Secure Your Booking</h2>
-
-        <p>
-        Ready to explore Sidemen with us?  
-        You can secure your tour by sending a deposit or full payment via PayPal.
-        Safe, easy, and trusted worldwide.
-        </p>
-
-        <a href="https://paypal.me/sidementourguide" target="_blank" class="paypal-btn">
-            Pay with PayPal
-        </a>
-
-        <span class="payment-note">
-        *Please contact us before making a payment to confirm availability.
-        </span>
-
-    </div>
-
-</section>
 
 <footer class="main-footer">
     <div class="footer-content">
@@ -257,25 +214,68 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 
 
-<script>
-let lastScroll = 0;
-const bottomNav = document.getElementById("bottomNav");
-const floatingSocial = document.getElementById("floatingSocial");
 
-window.addEventListener("scroll", () => {
-    let currentScroll = window.pageYOffset;
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script> emailjs.init("8520Px4LIsuk2To9W");</script>
+<script src="js/main.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AUuw8sUYCc6GHZ_hWncLoYuhdULBjRCoU4HJkLS79DaMS1UsJsOFcIx7PBZI_dXpHCO1d2vitpuXy9ei&currency=USD"></script>
+<script src="js/transport.js"></script>
 
-    if (currentScroll > lastScroll) {
-        bottomNav.classList.add("hide-nav");
-        floatingSocial.classList.add("hide-nav");
-    } else {
-        bottomNav.classList.remove("hide-nav");
-        floatingSocial.classList.remove("hide-nav");
-    }
+<div id="ridePopup" class="ride-popup">
 
-    lastScroll = currentScroll;
-});
-</script>
+<div class="ride-popup-content">
+
+<span class="close-popup">&times;</span>
+
+<h2>Book Your Transport</h2>
+
+<form id="transportForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<input type="text" id="pickup" placeholder="Pickup Location" required>
+
+<select id="destination" required>
+<option value="" disabled selected>Select Destination</option>
+<option value="Airport" data-price="550000">Airport – 500K</option>
+<option value="Uluwatu" data-price="600000">Uluwatu – 600K</option>
+<option value="Ubud" data-price="400000">Ubud – 400K</option>
+<option value="Amed" data-price="400000">Amed – 400K</option>
+<option value="Padangbai" data-price="325000">Padangbai – 325K</option>
+<option value="sanur" data-price="375000">sanur – 375k</option>
+<option value="kuta/legian/seminyak" data-price="500000">kuta/legian/seminyak – 500K</option>
+<option value="jimbaran" data-price="550000">jimbaran – 550K</option>
+<option value="canggu/tabanan" data-price="600000">canggu/tabanan – 600K</option>
+<option value="tegalalang" data-price="475000">tegalalang – 475K</option>
+<option value="kintamani" data-price="450000">Padangbai – 450K</option>
+<option value="lovina" data-price="800000">lovina – 800K</option>
+<option value="pemuteran" data-price="100000">pemuteran – 1000K</option>
+<option value="munduk" data-price="750000">munduk – 750K</option>
+</select>
+
+<input type="number" id="people" min="1" value="1">
+
+<select id="paymentOption">
+<option value="full">Full Payment (100%)</option>
+<option value="deposit">Deposit (50%)</option>
+</select>
+
+<h3>Total Price: <span id="totalPrice">IDR 0</span></h3>
+
+<h3>Pay Now: <span id="payNowAmount">IDR 0</span></h3>
+
+<button type="submit" class="ride-cta">
+Proceed to Payment
+</button>
+
+<div id="paypal-button-container"></div>
+
+</form>
+
+
+</div>
 
 </body>
 </html>

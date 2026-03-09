@@ -2,7 +2,7 @@
 <html lang="en">
 <head><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-
+ 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -55,41 +55,171 @@ aria-label="Chat on WhatsApp">
     </div>
 </header>
 
-<!-- CONTACT -->
 
-<section id="contact" class="container contact">
+<section class="container contact-section">
 
-    <h2>Ready for Your Sidemen Journey?</h2>
+<h2>Plan Your Sidemen Experience</h2>
+<p>Fill the form below to book your tour in Sidemen. We will confirm your booking shortly.</p>
 
-    <p>Contact us directly on WhatsApp to check availability and start planning your experience.</p>
+<div class="contact-grid">
 
-    <a class="cta" href="https://wa.me/6281936557957">Chat on WhatsApp</a>
+
+
+
+<!-- BOOKING FORM -->
+<div class="booking-box">
+
+<form id="contactBookingForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<select id="tourSelect" required>
+
+<option value="">Select Tour</option>
+
+<option value="2-Hour Ricefield Trekking" data-price="200000">
+2-Hour Ricefield Trekking – IDR 200K / person
+</option>
+
+<option value="Ricefield Trekking + Local Lunch" data-price="600000">
+Ricefield Trekking + Local Lunch – IDR 600K / person
+</option>
+
+<option value="Full Day Sidemen Experience" data-price="1375000">
+Full Day Sidemen Experience – IDR 1375K / person
+</option>
+
+<option value="Full Cultural & Spiritual Package" data-price="1250000">
+Full Cultural & Spiritual Package – IDR 1250K / person
+</option>
+
+<option value="Canang Sari Offering Course" data-price="250000">
+Canang Sari Offering Course – IDR 250K / person
+</option>
+
+<option value="Temple Purification Experience" data-price="750000">
+Temple Purification Experience – IDR 750K / person
+</option>
+
+<option value="Hidden Sidemen Scooter Journey" data-price="450000">
+Hidden Sidemen Scooter Journey – IDR 450K / person
+</option>
+
+<option value="Costumized Private Tour-Design Your Own Journey" data-price="150000">
+Costumized Private Tour-Design Your Own Journey – IDR 150K / person / hours
+</option>
+
+<option value="Discover East Bali-Full Day" data-price="750000">
+Discover East Bali-Full Day – IDR 750K / person / hours
+</option>
+
+<option value="Sidemen Highlight-Half Day Private Tour" data-price="600000">
+Sidemen Highlight-Half Day Private Tour – IDR 600K / person / hours
+</option>
+
+<option value="Sunrise Jeep Adventure" data-price="1450000">
+Sunrise Jeep Adventure – IDR 1450K / person
+</option>
+
+<option value="Mount Batur Sunrise Trek" data-price="1350000">
+Mount Batur Sunrise Trek – IDR 1350K / person
+</option>
+
+<option value="East Bali Rafting Journey" data-price="850000">
+East Bali Rafting Journey – IDR 850K / person
+</option>
+
+<option value="Tandem ATV Experience" data-price="1000000">
+Tandem ATV Experience – IDR 1000K / person
+</option>
+
+<option value="Single ATV Adventure" data-price="750000">
+Single ATV Adventure – IDR 750K / person
+</option>
+
+</select>
+
+    <div id="trekkingNote" class="special-note" style="display:none;">
+🌾 <strong>Ricefield Trekking Information</strong><br><br>
+This activity starts from our <strong>meeting point in Sidemen village</strong>.
+Guests staying in Sidemen area can easily reach the meeting point within a few minutes.
+The exact meeting point and directions will be shared after your booking confirmation via WhatsApp.
+</div>
+
+<div class="booking-note">
+<strong>Important Information</strong><br><br>
+All activities are based in <strong>Sidemen village</strong>.<br>
+✔ Free pickup is available within Sidemen area.<br>
+✔ Guests staying outside Sidemen may need to come to the meeting point.<br><br>
+Please write your hotel name when filling the form.
+</div>
+
+
+
+<input type="date" id="date" required>
+
+<input type="number" id="people" value="1" min="1">
+
+<input type="text" id="hotel" placeholder="Hotel / Pickup Location">
+
+<select id="pickupTime"class="pickup-field">
+
+<option value="">Pickup Time</option>
+<option>07:00</option>
+<option>08:00</option>
+<option>09:00</option>
+<option>10:00</option>
+
+</select>
+
+<input type="text" id="phone" placeholder="WhatsApp Number">
+
+<select id="paymentType">
+
+<option value="full">Full Payment</option>
+<option value="deposit">50% Deposit</option>
+
+</select>
+
+<div class="price-box">
+
+<strong id="totalPrice">Total: $0 USD</strong>
+
+
+</div>
+
+<button type="button" id="payNow" class="book-btn">
+Book Now
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<div class="contact-info">
+<p><strong>Email:</strong> dexalit126@gmail.com</p>
+<p><strong>WhatsApp:</strong> +62 819-3655-7957</p>
+<p><strong>Location:</strong> Sidemen Village, Karangasem – Bali</p>
+</div>
+
+<div class="map-box">
+
+<iframe
+src="https://maps.google.com/maps?q=Sidemen%20Tour%20Guide&z=13&output=embed"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"
+style="width:100%; height:350px; border:0; border-radius:10px;">
+</iframe>
+
+</div>
 
 </section>
-</section>
-<!-- PAYMENT SECTION -->
 
-<section class="payment-section">
 
-    <div class="payment-box">
-
-        <h2>Secure Your Booking</h2>
-
-        <p>
-        Ready to explore Sidemen with us?  
-        You can secure your tour by sending a deposit or full payment via PayPal.
-        Safe, easy, and trusted worldwide.
-        </p>
-
-        <a href="https://paypal.me/sidementourguide" target="_blank" class="paypal-btn">
-            Pay with PayPal
-        </a>
-
-        <span class="payment-note">
-        *Please contact us before making a payment to confirm availability.
-        </span>
-
-    </div>
 
 
 
@@ -118,19 +248,153 @@ aria-label="Chat on WhatsApp">
 </a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+  emailjs.init("8520Px4LIsuk2To9W");
+</script>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+<script>
 
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav");
+const tourSelect = document.getElementById("tourSelect");
+const peopleInput = document.getElementById("people");
+const paymentType = document.getElementById("paymentType");
+const totalPrice = document.getElementById("totalPrice");
 
-    if(hamburger && navMenu){
-        hamburger.addEventListener("click", function(){
-            navMenu.classList.toggle("active");
-        });
-    }
+let basePrice = 0;
+
+const exchangeRate = 16000;
+
+tourSelect.addEventListener("change", function(){
+
+const selected = tourSelect.options[tourSelect.selectedIndex];
+
+basePrice = parseInt(selected.getAttribute("data-price")) || 0;
+
+calculateTotal();
 
 });
+
+peopleInput.addEventListener("input", calculateTotal);
+
+paymentType.addEventListener("change", calculateTotal);
+
+function calculateTotal(){
+
+const people = parseInt(peopleInput.value) || 1;
+
+let totalIDR = basePrice * people;
+
+if(paymentType.value === "deposit"){
+totalIDR = totalIDR * 0.5;
+}
+
+const totalUSD = (totalIDR / exchangeRate).toFixed(2);
+
+totalPrice.innerText = "Total: $" + totalUSD + " USD";
+
+}
+
+</script>
+
+<script>
+
+const trekkingNote = document.getElementById("trekkingNote");
+const pickupField = document.querySelector(".pickup-field");
+
+tourSelect.addEventListener("change", function(){
+
+const selectedText = tourSelect.options[tourSelect.selectedIndex].text;
+
+if(selectedText.includes("Ricefield Trekking")){
+
+trekkingNote.style.display = "block";
+pickupField.style.display = "none";
+
+}else{
+
+trekkingNote.style.display = "none";
+pickupField.style.display = "block";
+
+}
+
+});
+
+</script>
+
+<script>
+
+const payNow = document.getElementById("payNow");
+
+payNow.addEventListener("click", function(){
+
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const tourSelect = document.getElementById("tourSelect");
+const tour = tourSelect.options[tourSelect.selectedIndex].text;
+
+const date = document.getElementById("date").value;
+const people = parseInt(document.getElementById("people").value) || 1;
+const hotel = document.getElementById("hotel").value;
+const pickupTime = document.getElementById("pickupTime").value;
+const phone = document.getElementById("phone").value;
+const paymentType = document.getElementById("paymentType").value;
+
+const price = parseInt(tourSelect.options[tourSelect.selectedIndex].dataset.price);
+
+let totalIDR = price * people;
+
+if(paymentType === "deposit"){
+totalIDR = totalIDR * 0.5;
+}
+
+const exchangeRate = 16000;
+const totalUSD = (totalIDR / exchangeRate).toFixed(2);
+
+const data = {
+
+customer_name: name,
+customer_email: email,
+phone: phone,
+tour: tour,
+date: date,
+people: people,
+hotel: hotel,
+pickup_time: pickupTime,
+payment: paymentType,
+amount: totalUSD
+
+};
+
+// simpan booking
+localStorage.setItem("bookingData", JSON.stringify(data));
+
+// kirim email owner
+emailjs.send("service_e7hsh38","template_wm84v18",data)
+
+.then(function(){
+
+// kirim email customer
+return emailjs.send("service_e7hsh38","template_sgcx2mc",data);
+
+})
+
+.then(function(){
+
+window.location.href="booking-success.html";
+
+})
+
+.catch(function(error){
+
+console.log("EMAIL FAILED:",error);
+
+window.location.href="booking-success.html";
+
+});
+
+});
+
 </script>
 
 </body>
