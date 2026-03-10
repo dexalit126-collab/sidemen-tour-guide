@@ -1594,3 +1594,18 @@ height:280px;
 }
 
 }
+
+.discount {
+  font-size: 13px;
+  color: #2e7d32;
+  margin-top: 3px;
+}
+
+.tour-info {
+  background: #f7f7f7;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #555;
+}

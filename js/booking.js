@@ -37,20 +37,35 @@ console.log("SUBMIT WORKING");
   document.getElementById("people").addEventListener("input", calculateTotal);
   document.getElementById("paymentType").addEventListener("change", calculateTotal);
 
+
   function calculateTotal() {
-    const people = parseInt(document.getElementById("people").value) || 1;
-    const paymentType = document.getElementById("paymentType").value;
+  const people = parseInt(document.getElementById("people").value) || 1;
+  const paymentType = document.getElementById("paymentType").value;
 
-    let totalIDR = basePrice * people;
+  let totalIDR = basePrice * people;
 
-    if (paymentType === "deposit") {
-      totalIDR = totalIDR * 0.5;
-    }
+  // ===== DISCOUNT LOGIC =====
+  let discount = 0;
 
-    const totalUSD = (totalIDR / exchangeRate).toFixed(2);
+  if (people >= 2) {
+    discount = totalIDR * 0.10; // 10% discount
+    totalIDR = totalIDR - discount;
+  }
 
+  // ===== PAYMENT TYPE =====
+  if (paymentType === "deposit") {
+    totalIDR = totalIDR * 0.5;
+  }
+
+  const totalUSD = (totalIDR / exchangeRate).toFixed(2);
+
+  // ===== SHOW PRICE =====
+  if (people >= 2) {
+    totalPrice.innerText = "10% Group Discount Applied | Total: $" + totalUSD + " USD";
+  } else {
     totalPrice.innerText = "Total: $" + totalUSD + " USD";
   }
+}
 
    (payNow).addEventListener("click", function() {
  const name = document.getElementById("name")?.value || "";
