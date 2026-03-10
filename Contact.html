@@ -152,7 +152,8 @@ The exact meeting point and directions will be shared after your booking confirm
 <strong>Important Information</strong><br><br>
 All activities are based in <strong>Sidemen village</strong>.<br>
 ✔ Free pickup is available within Sidemen area.<br>
-✔ Guests staying outside Sidemen may need to come to the meeting point.<br><br>
+✔ Guests staying outside Sidemen can meet us at the meeting point.<br>
+👥 10% Group Discount automatically applied for 2 or more guests<br><br>
 Please write your hotel name when filling the form.
 </div>
 
@@ -262,36 +263,51 @@ const paymentType = document.getElementById("paymentType");
 const totalPrice = document.getElementById("totalPrice");
 
 let basePrice = 0;
-
 const exchangeRate = 16000;
 
-tourSelect.addEventListener("change", function(){
+// ketika pilih tour
+tourSelect.addEventListener("change", function () {
 
-const selected = tourSelect.options[tourSelect.selectedIndex];
+  const selected = tourSelect.options[tourSelect.selectedIndex];
+  basePrice = parseInt(selected.getAttribute("data-price")) || 0;
 
-basePrice = parseInt(selected.getAttribute("data-price")) || 0;
-
-calculateTotal();
+  calculateTotal();
 
 });
 
+// ketika ubah jumlah orang
 peopleInput.addEventListener("input", calculateTotal);
 
+// ketika ubah tipe pembayaran
 paymentType.addEventListener("change", calculateTotal);
 
-function calculateTotal(){
+function calculateTotal() {
 
-const people = parseInt(peopleInput.value) || 1;
+  const people = parseInt(peopleInput.value) || 1;
 
-let totalIDR = basePrice * people;
+  let totalIDR = basePrice * people;
 
-if(paymentType.value === "deposit"){
-totalIDR = totalIDR * 0.5;
-}
+  // ===== DISCOUNT 10% jika 2 orang atau lebih =====
+  let discount = 0;
 
-const totalUSD = (totalIDR / exchangeRate).toFixed(2);
+  if (people >= 2) {
+    discount = totalIDR * 0.10;
+    totalIDR = totalIDR - discount;
+  }
 
-totalPrice.innerText = "Total: $" + totalUSD + " USD";
+  // ===== PAYMENT TYPE =====
+  if (paymentType.value === "deposit") {
+    totalIDR = totalIDR * 0.5;
+  }
+
+  const totalUSD = (totalIDR / exchangeRate).toFixed(2);
+
+  // ===== DISPLAY =====
+  if (people >= 2) {
+    totalPrice.innerText = "10% Group Discount Applied | Total: $" + totalUSD + " USD";
+  } else {
+    totalPrice.innerText = "Total: $" + totalUSD + " USD";
+  }
 
 }
 

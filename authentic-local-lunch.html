@@ -95,7 +95,7 @@ aria-label="Chat on WhatsApp">
      <button 
 class="book-btn"
 data-tour="Experience Traditional Balinese Home Cooking"
-data-price="250000">
+data-price="275000">
 Book Now
 </button>
 
@@ -138,6 +138,7 @@ Book Now
     <span id="closeModal">&times;</span>
     <h2 id="tourTitle"></h2>
 
+
     <input type="text" id="name" placeholder="Your Name" required>
     <input type="email" id="email" placeholder="Your Email" required>
     <input type="date" id="date" required>
@@ -145,6 +146,7 @@ Book Now
 
     <input type="text" id="hotel" placeholder="Hotel Name (if pickup needed)">
     <input type="time" id="pickupTime" placeholder="Pickup Time">
+    <input type="text" id="phone" placeholder="WhatsApp Number (with country code)" required>
 
     <select id="paymentType">
       <option value="deposit">Deposit 50%</option>
@@ -153,9 +155,12 @@ Book Now
 
     <p id="totalPrice"></p>
 
-    <button id="payNow" type="button">Proceed to Payment</button>
+    <button id="payNow">Proceed to Payment</button>
   </div>
 </div>
+
+    
+    
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
