@@ -11,3 +11,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 });
+
+window.addEventListener("load", function(){
+
+const tooltip = document.getElementById("waTooltip");
+
+if(!tooltip) return;
+
+// muncul setelah 4 detik
+setTimeout(function(){
+tooltip.classList.add("show");
+},4000);
+
+// hilang lagi setelah 10 detik
+setTimeout(function(){
+tooltip.classList.remove("show");
+},30000);
+
+});
+
