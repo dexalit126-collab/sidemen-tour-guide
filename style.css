@@ -1629,3 +1629,98 @@ height:280px;
   font-size: 14px;
   color: #555;
 }
+
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .booking-box {
+    padding: 15px;
+  }
+
+  .booking-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Semua input & select */
+  .booking-box input,
+  .booking-box select {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+  /* FIX KHUSUS SELECT YANG MELEBAR */
+  .booking-box select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+  }
+
+  /* tombol */
+  .book-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  /* price box */
+  .price-box {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* note */
+  .booking-note,
+  .special-note {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* pickup time hidden fix */
+  .pickup-field {
+    width: 100%;
+  }
+
+}
+.booking-box select:focus,
+.booking-box input:focus {
+  outline: none;
+  border-color: #c19b76;
+  box-shadow: 0 0 0 2px rgba(193,155,118,0.2);
+}
+
+#totalPrice,
+#payNowAmount {
+  color: #000;
+  font-weight: bold;
+  display: block;
+}
+
+.transport-cta-strong {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 24px;
+
+  background: #000;
+  color: #fff;
+
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.transport-cta-strong:hover {
+  background: #333;
+}

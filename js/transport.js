@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+ 
 // ==========================
 // ELEMENT
 // ==========================
@@ -25,6 +26,8 @@ let finalAmount = 0;
 // POPUP
 // ==========================
 
+
+
 openBtn.onclick = function(){
 popup.style.display = "flex";
 }
@@ -40,6 +43,7 @@ popup.style.display = "none";
 }
 
 
+
 // ==========================
 // CALCULATE PRICE
 // ==========================
@@ -48,7 +52,9 @@ function updatePrice(){
 
 const selected = destination.options[destination.selectedIndex];
 
-if(!selected.dataset.price){
+if(!selected || !selected.dataset.price){
+totalPriceDisplay.innerText = "IDR 0";
+payNowDisplay.innerText = "IDR 0";
 return;
 }
 
@@ -83,6 +89,17 @@ destination.addEventListener("change", updatePrice);
 people.addEventListener("input", updatePrice);
 paymentOption.addEventListener("change", updatePrice);
 
+
+// ==========================
+// INIT (FIX UTAMA)
+// ==========================
+
+// set default ke option pertama yang ada harga
+if(destination.selectedIndex === 0){
+  destination.selectedIndex = -1; // biar tidak dianggap valid
+}
+
+updatePrice();
 
 // ==========================
 // FORM SUBMIT
@@ -147,3 +164,4 @@ window.location.href =
 });
 
 }); 
+
