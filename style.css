@@ -1724,3 +1724,124 @@ height:280px;
 .transport-cta-strong:hover {
   background: #333;
 }
+
+
+/* CONTAINER */
+.google-review {
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* HEADER */
+.review-summary strong {
+  color: #4285F4;
+}
+
+/* SLIDER */
+.review-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+}
+
+.review-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+.review-card {
+  flex: 0 0 85%;
+  max-width: 420px;
+  scroll-snap-align: center;
+  background: #fff;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  text-align: center;
+  line-height: 1.6;
+  font-size: 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-width: 100%;
+}
+/* ACTIVE EFFECT */
+.review-card.active {
+  transform: scale(1.03);
+}
+
+/* HEADER PROFILE */
+.review-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* AVATAR */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+/* VERIFIED */
+.verified {
+  font-size: 12px;
+  color: #34A853;
+}
+
+/* STARS (GOOGLE GOLD) */
+.stars {
+  color: #FBBC05;
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+/* GOOGLE LOGO */
+.google-logo {
+  width: 40px;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 600px) {
+  .review-card {
+    flex: 0 0 92%;
+    max-width: 92%;
+  }
+}
+
+/* WRAPPER */
+.review-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.tour-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.tour-cta p {
+  max-width: 600px;
+  margin: 0 auto 15px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.btn-tour-cta {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-tour-cta:hover {
+  background: #333;
+}
