@@ -1846,3 +1846,62 @@ height:280px;
   background: #333;
 }
 
+.about-cta {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 17px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #2f6f4f;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #2f6f4f;
+  color: #2f6f4f;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #24563d;
+}
+
+.btn-secondary:hover {
+  background: #2f6f4f;
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
