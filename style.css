@@ -164,25 +164,43 @@ section{
     object-fit:cover;
     border-radius:16px;
 }
-  .slider{
-  width:100%;
-  overflow:hidden;
+
+ .home-slider {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
 }
 
-.slides{
-  display:flex;
+.home-slides {
+  display: flex;
+  width: 400%; /* jumlah gambar x 100% */
   animation: slide 12s infinite;
 }
+.home-slides {
+  display: flex;
+  animation: slide 16s infinite ease-in-out;
+}
+.home-slides img {
+  width: 100%;
+  height: 280px;      /* ⬅️ lebih kecil */
+  object-fit: cover;
+}
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(0); }
 
-.slides img{
-  width:100%;
+  30%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-100%); }
+
+  55%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-200%); }
+
+  80%  { transform: translateX(-300%); }
+  100% { transform: translateX(-300%); }
 }
 
-@keyframes slide{
-  0%{transform:translateX(0);}
-  33%{transform:translateX(-100%);}
-  66%{transform:translateX(-200%);}
-} 
+
+
 
 
 /* ==============================
@@ -808,48 +826,134 @@ header nav a:hover {
 /* =========================
    HERO
 ========================= */
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO IMAGE */
 .lunch-hero {
-    position: relative;
-    min-height: 125vh;
-    background: url('images/local-lunch-experience.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.hero-overlay {
-    background: rgba(0,0,0,0.45);
-    padding: 40px 25px;
-    max-width: 850px;
-    border-radius: 12px;
-    color: #fff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+/* SLIDER */
+.slider {
+  position: absolute;
+  inset: 0;
 }
 
-.hero-overlay h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.hero-overlay p {
-    font-size: 1.3rem;
-    margin-bottom: 25px;
+.slide.active {
+  opacity: 1;
 }
 
-.hero-overlay .back-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #f27a1a;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+/* ❌ HAPUS DARK OVERLAY BIAR GAMBAR TIDAK GELAP */
+/* HAPUS ATAU COMMENT INI */
+/*
+.lunch-hero::after {
+  background: rgba(0,0,0,0.45);
+}
+*/
+
+/* TEXT SECTION */
+.hero-text-section {
+  display: block;
+  background: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.hero-overlay .back-btn:hover {
-    background: #d96b13;
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000000; /* 🔥 penting biar kelihatan */
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #f27a1a;
+}
+
+.hero-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.hero-content p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #666;
+}
+.hero-text-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+/* CONTENT */
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* TEXT STYLE */
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.back-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f27a1a;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .lunch-hero {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content h2 {
+    font-size: 15px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
 }
 
 /* =========================
@@ -1935,3 +2039,123 @@ height:280px;
   background: #1ebe5d;
 }
 
+/* HERO CONTAINER */
+.lunch-hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+/* SLIDER */
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* DARK OVERLAY */
+.lunch-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+/* OVERLAY WRAPPER */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTENT BOX (BIAR TIDAK NEMPEL & TIDAK KETUMPUK) */
+.hero-content {
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* TEXT FIX */
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.back-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* SEO INTRO */
+.seo-intro {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.seo-intro h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.seo-intro h2 {
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.seo-intro p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.things-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.things-list li {
+    margin: 8px 0;
+    font-size: 16px;
+}

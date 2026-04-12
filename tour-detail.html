@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidemen Bali Tours & Experiences | Ricefield Trekking, Cultural & Spiritual Activities</title>
+
+<meta name="description" content="Explore the best tours in Sidemen Bali including ricefield trekking, cultural experiences, offering class, and temple purification. Authentic local experiences with trusted local guides.">
+<link rel="stylesheet" href="style.css">       <!-- CSS global lama -->
+<link rel="stylesheet" href="desktop-fix.css"> <!-- CSS mini baru -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ===== HERO ===== */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: block;
+}
+
+/* ===== SPACING (WAJIB) ===== */
+.hero + .slider {
+  margin-top: 20px;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 15px;
+  position: relative;
+}
+
+/* HIDE SCROLLBAR (optional biar clean) */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0; /* ⬅️ penting biar tidak gepeng */
+}
+
+/* ===== CONTENT ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== REVIEW ===== */
+.review {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ===== TYPO ===== */
+h1 {
+  margin: 10px 0;
+}
+
+h2 {
+  margin-top: 25px;
+}
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 15px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 50vh;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .slider {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .slider img {
+    height: 140px;
+  }
+
+  ul {
+    padding-left: 18px;
+  }
+
+  li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .cta {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+
+
+</style>
+
+</head>
+
+<body class="tour-page">
+  <div class="wa-wrapper">
+
+<div class="wa-tooltip" id="waTooltip">
+👋 Need help?
+Chat with us on WhatsApp
+</div>
+
+<a href="https://wa.me/6281936557957?text=Hi%20Sidemen%20Tour%20Guide!%20I’m%20interested%20in%20your%20services%20and%20would%20love%20more%20information."
+class="floating-wa-pro"
+target="_blank"
+aria-label="Chat with Sidemen Tour Guide on WhatsApp">
+
+<span class="wa-online"></span>
+💬
+
+</a>
+
+</div>
+  
+<section class="hero" id="hero"></section>
+
+<div class="slider-wrapper">
+  <div class="slider" id="slider"></div>
+</div>
+
+<div class="container">
+
+<h1 id="title"></h1>
+<p id="subtitle"></p>
+
+<h2>🌿 Experience Highlights</h2>
+<ul id="highlights"></ul>
+
+<h2>🗺️ Itinerary</h2>
+<ul id="itinerary"></ul>
+
+<h2>💰 Price</h2>
+<p id="price"></p>
+
+<section class="google-review">
+
+  <h3>What Travelers Say About Sidemen Tour Guide</h3>
+   
+  <div class="review-summary">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-logo">
+    <div>
+      <strong>Excellent on Google</strong>
+      <p>5.0 out of 5 based on 124+ reviews</p>
+      <div class="stars">★★★★★</div>
+    </div>
+  </div>
+
+  <div class="review-slider" id="reviewSlider">
+
+    <div class="review-card">
+      <div class="review-header">
+        <img src="https://ui-avatars.com/api/?name=Sophia" class="avatar">
+        <div>
+          <strong>Sophia 🇳🇱</strong>
+          <div class="verified">✔ Verified Google Review</div>
+        </div>
+      </div>
+      <div class="stars">★★★★★</div>
+      <p>“Beautiful places in Sidemen, very friendly and helpful guide.”</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <img src="https://ui-avatars.com/api/?name=Federico" class="avatar">
+        <div>
+          <strong>Federico 🇪🇸</strong>
+          <div class="verified">✔ Verified Google Review</div>
+        </div>
+      </div>
+      <div class="stars">★★★★★</div>
+      <p>“Very knowledgeable guide and excellent service.”</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <img src="https://ui-avatars.com/api/?name=Corina" class="avatar">
+        <div>
+          <strong>Corina 🇩🇪</strong>
+          <div class="verified">✔ Verified Google Review</div>
+        </div>
+      </div>
+      <div class="stars">★★★★★</div>
+      <p>“Amazing rice field trekking and cultural explanation.”</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <img src="https://ui-avatars.com/api/?name=Nancy" class="avatar">
+        <div>
+          <strong>Nancy 🇩🇪</strong>
+          <div class="verified">✔ Verified Google Review</div>
+        </div>
+      </div>
+      <div class="stars">★★★★★</div>
+      <p>“Unforgettable experience with deep Balinese philosophy.”</p>
+    </div>
+
+  </div>
+
+  <div class="review-buttons">
+    <a href="https://search.google.com/local/writereview?placeid=ChIJcWxto6sb0i0RYX6mCf4piak" target="_blank" class="btn-review">
+      Leave a Review
+    </a>
+    <a href="https://maps.app.goo.gl/5U5NbSJepWVJQiJf6" target="_blank" class="btn-review-outline">
+      Read More Reviews
+    </a>
+  </div>
+
+</section>
+
+<a id="waBtn" class="cta" target="_blank">
+💬 Check Availability on WhatsApp
+</a>
+
+<a href="tours.html" class="cta" style="background:#333;">
+📅 Book Online (See All Tours)
+</a>
+
+<p style="text-align:center; font-size:14px; margin-top:10px;">
+✔ Instant response on WhatsApp  
+✔ Flexible booking  
+✔ Trusted local guide in Sidemen Bali
+</p>
+
+</div>
+
+<script> 
+
+const data = {
+trekking: {
+title: "Sidemen Ricefield Trekking + Authentic Local Lunch",
+subtitle: "Discover the beauty of Sidemen Bali with a guided rice field trekking experience and enjoy authentic Balinese home-cooked lunch with a local family",
+hero: "images/hero-rice-fields.jpg",
+images: [
+"images/local-farmer.jpg",
+"images/sawah-berundag.jpg",
+"images/sawah-sidemen.jpg",
+"images/authentic-local-lunch-at-local-house.jpg"
+],
+price: "IDR 600K (~$40) / person",
+priceValue: 600000,
+highlights: [
+"Guided rice field trekking in Sidemen Bali",
+"Meet local farmers and learn traditional farming",
+"Enjoy authentic Balinese lunch at a local house",
+"Peaceful countryside experience away from crowds"
+],
+itinerary: [
+"Start from Sidemen village meeting point",
+"Walk through beautiful rice terraces and countryside",
+"Interact with local farmers",
+"Visit a traditional Balinese home",
+"Enjoy authentic home-cooked lunch"
+],
+wa: "Ricefield Trekking Sidemen Bali"
+},
+
+walk: {
+title: "2-Hour Sidemen Ricefield Walk",
+subtitle: "Enjoy a relaxing short walk through the scenic rice fields of Sidemen Bali, perfect for beginners and nature lovers",
+hero: "images/ricefield-experience.jpg",
+images: [
+"images/sawah-berundag.jpg",
+"images/local-farmer.jpg",
+"images/aktifitas-sawah.jpg",
+"images/sidemen-ricefield-experience.jpg"
+],
+price: "IDR 200K (~$12) / person",
+highlights: [
+"Easy and relaxing rice field walk in Sidemen",
+"Beautiful views of traditional Balinese countryside",
+"Perfect short activity for all ages",
+"Experience local daily life in Sidemen village"
+],
+itinerary: [
+"Start from Sidemen village",
+"Walk through rice fields and small paths",
+"Enjoy scenic views and fresh air",
+"Return to starting point"
+],
+wa: "Ricefield Walk Sidemen Bali"
+},
+
+fullday: {
+title: "Full Day Sidemen Bali Cultural Experience",
+subtitle: "Explore the best of Sidemen Bali with a full-day cultural tour including rice field trekking, temple purification ritual, and traditional Balinese experiences",
+hero: "images/local-farmer.jpg",
+images: [
+"images/musim sayur.jpg",
+"images/sawah-sidemen.jpg",
+"images/melukat.jpg",
+"images/makan siang.jpg"
+],
+price: "IDR 1375K (~$85) / person",
+highlights: [
+"Complete Sidemen Bali cultural experience",
+"Rice field trekking with local guide",
+"Balinese offering making experience",
+"Temple purification (Melukat) with local priest",
+"Authentic traditional lunch"
+],
+itinerary: [
+"Start from Sidemen village",
+"Rice field trekking through local countryside",
+"Learn how to make Balinese offerings",
+"Temple purification ritual (Melukat)",
+"Enjoy traditional lunch in local setting"
+],
+wa: "Full Day Sidemen Bali Experience"
+},
+
+culturefull: {
+title: "Full Cultural & Spiritual Package in Sidemen Bali",
+subtitle: "Experience a complete Balinese journey with offering making, temple purification, and authentic local lunch in Sidemen village",
+hero: "images/purification-lead-by-local-priest.jpg",
+images: [
+"images/offering-course.jpg",
+"images/melukat.jpg",
+"images/makan siang.jpg",
+"images/authentic-local-lunch-at-local-house.jpg"
+],
+price: "IDR 1250K (~$78) / person",
+highlights: [
+"Create traditional Balinese offerings (canang sari)",
+"Participate in temple purification ritual (Melukat)",
+"Learn Balinese culture and philosophy",
+"Enjoy authentic home-cooked lunch with local family"
+],
+itinerary: [
+"Welcome and introduction in Sidemen village",
+"Learn and create canang sari offerings",
+"Temple purification ritual with local priest",
+"Cultural explanation and spiritual meaning",
+"Enjoy traditional Balinese lunch at local house"
+],
+wa: "Full Cultural & Spiritual Package Sidemen Bali"
+},
+
+offering: {
+title: "Canang Sari Offering Course in Sidemen Bali",
+subtitle: "Learn how to create traditional Balinese offerings and understand the deep spiritual meaning behind each element",
+hero: "images/proses-canang-sari.jpg",
+images: [
+"images/offering-course.jpg",
+"images/canang-sari.jpg",
+"images/bunga.jpg",
+"images/banten.jpg"
+],
+price: "IDR 250K (~$15) / person",
+highlights: [
+"Hands-on canang sari making experience",
+"Learn Balinese spiritual philosophy",
+"Guidance from local host",
+"Understand daily offerings in Bali"
+],
+itinerary: [
+"Introduction to Balinese offerings",
+"Prepare materials and learn meanings",
+"Create your own canang sari",
+"Explanation of daily rituals in Bali"
+],
+wa: "Canang Sari Offering Course Sidemen Bali"
+},
+
+purification: {
+title: "Temple Purification Experience in Sidemen Bali",
+subtitle: "Join a sacred water blessing ritual guided by a local priest and experience spiritual cleansing in a peaceful temple setting",
+hero: "images/melukat.jpg",
+images: [
+"images/purification-lead-by-local-priest.jpg",
+"images/ritual.jpg",
+"images/proses-melukat.jpg",
+"images/sidemen-temple-purification.jpg"
+],
+price: "IDR 750K (~$45) / person",
+highlights: [
+"Sacred water purification ritual (Melukat)",
+"Guided by knowledgeable local host",
+"Learn spiritual meaning of the ritual",
+"Peaceful and authentic temple experience"
+],
+itinerary: [
+"Meet at temple location in Sidemen",
+"Preparation and wearing sarong",
+"Guided purification ritual",
+"Spiritual explanation and reflection",
+"Finish and relax at temple area"
+],
+wa: "Temple Purification Experience Sidemen Bali"
+},
+
+scooter: {
+title: "Hidden Sidemen Scooter Journey",
+subtitle: "Explore hidden gems of Sidemen Bali by scooter — ride through quiet backroads, rice terraces, waterfalls, and authentic local villages",
+hero: "images/guided-scooter-tour.jpg",
+images: [
+"images/scooter-tour.jpg",
+"images/sidemen-ricefield-experience.jpg",
+"images/gembleng-waterfall-sidemen.jpg",
+"images/jembatan.jpg"
+],
+price: "IDR 450K (~$27) / person",
+priceValue: 450000,
+
+highlights: [
+"Explore hidden Sidemen by scooter with local driver",
+"Ride through peaceful countryside and rice terraces",
+"Visit a hidden waterfall and scenic viewpoints",
+"Cross the iconic Yellow Bridge",
+"Experience authentic local life and traditional houses"
+],
+
+itinerary: [
+"Pickup or meet in Sidemen village",
+"Start scooter ride through quiet backroads",
+"Stop at beautiful rice terraces and viewpoints",
+"Visit hidden waterfall (short walk included)",
+"Cross the famous Yellow Bridge",
+"Visit traditional local house",
+"Return to starting point"
+],
+
+wa: "Hidden Sidemen Scooter Journey",
+
+// ✅ INI YANG BENAR (optional)
+optional: {
+title: "Short Scooter Ride (2 Hours)",
+description: "A shorter version perfect for guests with limited time — enjoy rice terraces and a small waterfall.",
+price: "IDR 250K (~$15) / person",
+priceValue: 250000,
+
+highlights: [
+"Short scooter ride in Sidemen",
+"Beautiful rice terrace views",
+"Visit small waterfall",
+"Perfect for limited time"
+]
+}
+
+},
+
+// ✅ INI TETAP ADA (untuk halaman detail)
+scooter_short: {
+title: "Short Scooter Ride (2 Hours)",
+subtitle: "Quick scooter experience through rice terraces and waterfall in Sidemen",
+hero: "images/scooter-tour.jpg",
+images: [
+"images/sawah-berundag.jpg",
+"images/sidemen-waterfall.jpg"
+],
+price: "IDR 250K (~$15) / person",
+priceValue: 250000,
+
+highlights: [
+"Short scooter ride in Sidemen",
+"Beautiful rice terrace views",
+"Visit small waterfall",
+"Perfect for limited time"
+],
+
+itinerary: [
+"Meet in Sidemen village",
+"Short ride through rice fields",
+"Visit small waterfall",
+"Return to starting point"
+],
+
+wa: "Short Scooter Ride Sidemen Bali"
+},
+
+};
+
+const params = new URLSearchParams(window.location.search);
+const tourParam = params.get("tour");
+
+const t = data[tourParam] || data["trekking"];
+
+/* TEXT */
+document.getElementById("title").innerText = t.title;
+document.getElementById("subtitle").innerText = t.subtitle;
+document.getElementById("price").innerText = t.price;
+
+/* HERO */
+document.getElementById("hero").style.backgroundImage = `url(${t.hero})`;
+
+/* SLIDER */
+const slider = document.getElementById("slider");
+slider.innerHTML = "";
+
+t.images.forEach(img => {
+  const image = document.createElement("img");
+  image.src = img;
+  slider.appendChild(image);
+});
+
+/* AUTO SLIDE */
+let scrollPos = 0;
+setInterval(() => {
+  scrollPos += 220;
+
+  if (scrollPos >= slider.scrollWidth - slider.clientWidth) {
+    scrollPos = 0;
+  }
+
+  slider.scrollTo({
+    left: scrollPos,
+    behavior: "smooth"
+  });
+}, 3000);
+
+/* HIGHLIGHTS */
+const highlights = document.getElementById("highlights");
+highlights.innerHTML = "";
+t.highlights.forEach(i => {
+  highlights.innerHTML += `<li>${i}</li>`;
+});
+
+/* ITINERARY */
+const itinerary = document.getElementById("itinerary");
+itinerary.innerHTML = "";
+t.itinerary.forEach(i => {
+  itinerary.innerHTML += `<li>${i}</li>`;
+});
+
+if (t.optional) {
+
+  const box = document.createElement("div");
+  box.className = "optional-box";
+
+  box.innerHTML = `
+    <h2>✨ Short Option Available</h2>
+
+    <p><strong>${t.optional.title}</strong></p>
+    <p>${t.optional.description}</p>
+
+    <ul>
+      ${t.optional.highlights.map(h => `<li>✔ ${h}</li>`).join("")}
+    </ul>
+
+    <p><strong>Price:</strong> ${t.optional.price}</p>
+
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      
+      <a href="https://wa.me/6281936557957?text=Hello%20I%20want%20to%20check%20availability%20for%20${encodeURIComponent(t.optional.title)}"
+      class="cta">
+      👉 Check Availability
+      </a>
+
+      <a href="?tour=scooter_short" class="book-btn">
+      View Details
+      </a>
+
+    </div>
+  `;
+
+  document.querySelector(".container").appendChild(box);
+}
+
+
+/* WHATSAPP CTA */
+const waMessage = `Hello Sidemen Tour Guide! I want to check availability for ${t.wa}`;
+const waLink = `https://wa.me/6281936557957?text=${encodeURIComponent(waMessage)}`;
+
+document.getElementById("waBtn").href = waLink;
+</script>
+
+
+
+
+<footer class="main-footer">
+
+<div class="footer-social">
+<p class="social-text">
+Follow <strong>Sidemen Tour Guide</strong> for authentic cultural experiences, rice field trekking, and nature tours in <strong>Sidemen, Bali</strong>.
+</p>
+
+<div class="social-icons">
+
+<a href="https://www.instagram.com/sidementourguide/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.tripadvisor.co.id/Attraction_Review-g608495-d33266654-Reviews-Sidemen_tour_guide-Sidemen_Karangasem_Bali.html" target="_blank">
+<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tripadvisor.svg">
+</a>
+
+<a href="https://www.facebook.com/share/1WRZNWvkbR/" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://www.tiktok.com/@sidementourguide" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
+
+</div>
+</div>
+
+<div class="footer-content">
+<p class="footer-title">Sidemen Tour Guide</p>
+
+<p class="footer-description">
+Private tours, rice field trekking, cultural experiences, and authentic local journeys in Sidemen, Bali.
+</p>
+
+<p class="footer-copy">
+© 2026 Sidemen Tour Guide • All Rights Reserved
+</p>
+</div>
+
+</footer>
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+
+    <h2 id="tourTitle"></h2>
+
+    <div id="trekkingNote" class="special-note" style="display:none;">
+🌾 <strong>Ricefield Trekking Information</strong><br><br>
+This activity starts from our <strong>meeting point in Sidemen village</strong>.<br><br>
+Meeting point will be shared after booking via WhatsApp.
+</div>
+
+<div class="booking-note">
+<strong>Important Information</strong><br><br>
+All activities are based in <strong>Sidemen village</strong>.<br>
+✔ Free pickup in Sidemen<br>
+✔ Outside guests meet at meeting point<br>
+👥 10% discount for 2+ guests
+</div>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<input type="date" id="date">
+<input type="number" id="people" value="1" min="1">
+
+<input type="text" id="hotel" placeholder="Hotel Name">
+<input type="time" id="pickupTime">
+<input type="text" id="phone" placeholder="WhatsApp Number">
+
+<select id="paymentType">
+<option value="deposit">Deposit 50%</option>
+<option value="full">Full Payment</option>
+</select>
+
+<p id="totalPrice"></p>
+
+<button id="payNow">Proceed to Payment</button>
+
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+emailjs.init("8520Px4LIsuk2To9W");
+</script>
+
+<script>
+/* AUTO SET TOUR KE MODAL */
+document.getElementById("cta").addEventListener("click", function(e){
+  e.preventDefault();
+
+  document.getElementById("bookingModal").style.display = "block";
+
+  const params = new URLSearchParams(window.location.search);
+  const tour = params.get("tour") || "trekking";
+
+  const names = {
+    trekking: "Ricefield Trekking + Local Lunch",
+    walk: "2-Hour Ricefield Walk",
+    fullday: "Full Day Sidemen Experience",
+    culturefull: "Full Cultural & Spiritual Package Sidemen Bali"
+  };
+
+  document.getElementById("tourTitle").innerText = names[tour];
+
+  if(tour === "trekking"){
+    document.getElementById("trekkingNote").style.display = "block";
+  }
+});
+
+/* CLOSE MODAL */
+document.getElementById("closeModal").onclick = function(){
+  document.getElementById("bookingModal").style.display = "none";
+};
+</script>
+
+<script src="js/main.js"></script>
+<script src="/js/booking.js"></script>
+
+
+
+</body>
+</html>

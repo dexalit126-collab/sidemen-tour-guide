@@ -35,7 +35,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="style.css">       <!-- CSS global lama -->
 <link rel="stylesheet" href="lunch.css">       <!-- CSS halaman lunch lama -->
 <link rel="stylesheet" href="desktop-fix.css"> <!-- CSS mini baru -->
@@ -65,15 +64,26 @@ aria-label="Chat with Juni on WhatsApp">
 <body>
 
 <!-- HERO -->
+
+<!-- HERO IMAGE SLIDER ONLY -->
 <section class="lunch-hero">
-    <div class="hero-overlay">
-        <h1>Authentic Local Lunch at Juni’s House</h1>
-        <h2 class="seo-subtitle">Traditional Balinese Home Cooking Experience in Sidemen, Bali</h2>
-        <p>A Cultural Dining Experience in Sidemen</p>
-        <a href="tours.html" class="back-btn">← Back to Tours</a>
-    </div>
+  <div class="slider">
+    <img src="images/authentic-local-lunch-at-local-house.jpg" class="slide active">
+    <img src="images/balinese-lunch-experience.jpg" class="slide">
+    <img src="images/enjoying-local-food.jpg" class="slide">
+    <img src="images/experience-local-balinese-lunch-in-sidemen.jpg" class="slide">
+    <img src="images/local-lunch-experience.jpg" class="slide">
+  </div>
 </section>
 
+<!-- HERO TEXT (DIPISAH DI BAWAH) -->
+<section class="hero-text-section">
+  <div class="hero-content">
+    <h1>Authentic Local Lunch at Juni’s House</h1>
+    <h2 class="seo-subtitle">Traditional Balinese Home Cooking Experience in Sidemen, Bali</h2>
+    <p>A Cultural Dining Experience in Sidemen</p>
+  </div>
+</section>
 <!-- CONTENT -->
 <section class="lunch-content container">
 
@@ -117,7 +127,7 @@ aria-label="Chat with Juni on WhatsApp">
     <div class="cta-container">
         <a href="https://wa.me/6281936557957?text=Hi%20Juni%2C%20I%20would%20like%20to%20book%20the%20Authentic%20Local%20Lunch%20experience%20in%20Sidemen.%20Could%20you%20please%20check%20availability%3F"
            class="cta-button" target="_blank">
-           Book via WhatsApp
+           Check Availability on WhatsApp
         </a>
     </div>
 
@@ -366,5 +376,18 @@ Private tours, rice field trekking, cultural experiences, and authentic local jo
 <script src="js/main.js"></script>
 <script src="js/booking.js"></script>
 
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}
+
+setInterval(showSlide, 4000);
+</script>
 </body>
 </html>
