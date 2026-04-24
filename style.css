@@ -1454,25 +1454,7 @@ opacity:0.8;
 
 
 
-.main-footer {
-    background: #0B4F6C;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 50px;
-}
 
-.footer-content p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-.main-footer{
-background:#0e5a6b;
-color:white;
-text-align:center;
-padding:40px 20px;
-}
 
 .social-text{
 font-size:15px;
@@ -1506,21 +1488,68 @@ transform:scale(1.2);
 opacity:0.9;
 }
 
-.footer-title{
-font-size:18px;
-font-weight:600;
-margin-bottom:6px;
+
+
+
+/* ===== FOOTER CLEAN & PREMIUM ===== */
+footer {
+  background: #0f5c5f; /* tetap warna kamu tapi lebih refined */
+  color: #eaeaea;
+  padding: 30px 16px 20px;
+  text-align: center;
 }
 
-.footer-description{
-font-size:14px;
-opacity:0.85;
-margin-bottom:10px;
+/* Container */
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.footer-copy{
-font-size:13px;
-opacity:0.7;
+/* Title */
+.footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+/* Description */
+.footer-description {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #d6e4e4;
+  margin-bottom: 14px;
+}
+
+/* Legal */
+.footer-legal {
+  font-size: 11px;
+  color: #b5cccc;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 11px;
+  color: #9bbbbb;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 10px;
+}
+
+/* Spacing fix biar tidak terlalu tinggi */
+.footer-content p {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  color: #d6e4e4;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 .modal {
