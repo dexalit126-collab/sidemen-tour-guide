@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms & Conditions - Sidemen Tour Guide</title>
-
+    <link rel="stylesheet" href="style.css"> 
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,10 +13,14 @@
       padding: 30px 20px;
       line-height: 1.7;
       color: #333;
+      text-align: left;
     }
+
+
 
     h1 {
       margin-bottom: 20px;
+      text-align: center;
     }
 
     h3 {
@@ -26,6 +30,11 @@
 
     p {
       margin: 8px 0;
+    }
+
+    .back-home {
+      margin-top: 25px;
+      text-align: center;
     }
 
     .back-home a {
@@ -38,7 +47,13 @@
       text-decoration: none;
       transition: all 0.2s ease;
     }
-     /* Footer */
+
+    .back-home a:hover {
+      background-color: #0f5c5f;
+      color: #fff;
+    }
+
+    /* Footer */
     .footer {
       margin-top: 40px;
       font-size: 12px;
@@ -49,40 +64,83 @@
     }
   </style>
 </head>
+<div class="wa-wrapper">
 
+<div class="wa-tooltip" id="waTooltip">
+👋 Need help?
+Chat with us on WhatsApp
+</div>
+
+<a href="https://wa.me/6281936557957?text=Hi%20Sidemen%20Tour%20Guide!%20I’m%20interested%20in%20your%20services%20and%20would%20love%20more%20information."
+class="floating-wa-pro"
+target="_blank"
+aria-label="Chat with Sidemen Tour Guide on WhatsApp">
+
+<span class="wa-online"></span>
+💬
+
+</a>
+
+</div>
 <body>
+
+<header>
+  <div class="container nav">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Sidemen Tour Guide Logo">
+    </div>
+
+    <!-- MENU -->
+    <nav id="navMenu" class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="tours.html">Tours</a>
+      <a href="authentic-local-lunch.html">Home Dining</a>
+      <a href="transport-scooter-rental-sidemen.html">Transport & Scooter Rental</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- OVERLAY -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+  </div>
+</header>
+
+
+
+<div class="content">
 
 <h1>Terms & Conditions</h1>
 
 <p>
-These Terms & Conditions apply to all bookings made with <strong>Sidemen Tour Guide</strong>.
-By confirming a booking, guests agree to the following terms:
+These Terms & Conditions apply to all bookings made with <strong>Sidemen Tour Guide</strong>. By confirming a booking, guests agree to the following terms:
 </p>
 
 <h3>1. Booking Confirmation</h3>
 <p>
-All bookings must be confirmed through our official communication channels (e.g., WhatsApp).
-A booking is considered confirmed once both parties agree on the itinerary, date,
-number of participants, and payment arrangement.
+All bookings must be confirmed through our official communication channels (e.g., WhatsApp). A booking is considered confirmed once both parties agree on the itinerary, date, number of participants, and payment arrangement.
 </p>
 
 <h3>2. Deposit Payment</h3>
 <p>
-A deposit of up to 30% may be required to secure your reservation.
-The remaining balance can be paid in cash or as otherwise agreed before the tour begins.
+A deposit of up to 30% may be required to secure your reservation. The remaining balance can be paid in cash or as otherwise agreed before the tour begins.
 </p>
 
 <h3>3. Guest Responsibility</h3>
 <p>
-Guests are responsible for ensuring they are physically fit to participate in the tour.
-Sidemen Tour Guide is not liable for personal injury, loss, or damage during the activity,
-except where required by applicable law.
+Guests are responsible for ensuring they are physically fit to participate in the tour. Sidemen Tour Guide is not liable for personal injury, loss, or damage during the activity, except where required by applicable law.
 </p>
 
 <h3>4. Itinerary Changes</h3>
 <p>
-We reserve the right to modify routes, schedules, or activities due to weather conditions,
-safety concerns, or local circumstances beyond our control.
+We reserve the right to modify routes, schedules, or activities due to weather conditions, safety concerns, or local circumstances beyond our control.
 </p>
 
 <h3>5. Contact Information</h3>
@@ -95,6 +153,7 @@ For any questions regarding bookings or policies, please contact us:<br>
 WhatsApp: +62 819-3655-7957<br>
 Email: dexalit126@gmail.com
 </p>
+
 <!-- Back to Home Button -->
 <div class="back-home">
   <a href="index.html">← Back to Home</a>
@@ -104,5 +163,8 @@ Email: dexalit126@gmail.com
 <div class="footer">
 © 2026 Sidemen Tour Guide • All Rights Reserved
 </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
