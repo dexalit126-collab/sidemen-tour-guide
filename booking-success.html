@@ -40,23 +40,46 @@
   
     
 </div>
-
 <script>
+
 const data = JSON.parse(localStorage.getItem("bookingData"));
 
 if(data){
+
     document.getElementById("bookingDetails").innerHTML = `
+
         <p><strong>Name:</strong> ${data.customer_name}</p>
+
         <p><strong>Tour:</strong> ${data.tour}</p>
+
         <p><strong>Date:</strong> ${data.date}</p>
+
         <p><strong>People:</strong> ${data.people}</p>
+
         <p><strong>Hotel:</strong> ${data.hotel}</p>
+
         <p><strong>Pickup Time:</strong> ${data.pickup_time}</p>
+
         <p><strong>Payment Type:</strong> ${data.payment}</p>
-        <p><strong>Total Paid:</strong> $${data.amount}</p>
+
+        <p>
+        <strong>Total Paid:</strong><br>
+
+        <span style="font-size:24px;font-weight:bold;">
+        IDR ${data.amount_idr}
+        </span><br>
+
+        <small style="color:gray;">
+        ≈ $${data.amount_usd} USD (reference only)
+        </small>
+        </p>
+
     `;
+
 }
+
 </script>
+
 <script src="https://www.paypal.com/sdk/js?client-id=AUuw8sUYCc6GHZ_hWncLoYuhdULBjRCoU4HJkLS79DaMS1UsJsOFcIx7PBZI_dXpHCO1d2vitpuXy9ei&currency=USD"></script>
 
 <script>

@@ -189,7 +189,6 @@ Please write your hotel name when filling the form.
 <option>10:00</option>
 
 </select>
-
 <input type="text" id="phone" placeholder="WhatsApp Number">
 
 <select id="paymentType">
@@ -199,10 +198,15 @@ Please write your hotel name when filling the form.
 
 </select>
 
-<div class="price-box">
+<div class="price-box" id="totalPrice">
 
-<strong id="totalPrice">Total: $0 USD</strong>
+  <div style="font-size:24px;font-weight:bold;color:#111;">
+    IDR 0
+  </div>
 
+  <div style="font-size:14px;color:gray;margin-top:4px;">
+    ≈ $0 USD (reference only)
+  </div>
 
 </div>
 
@@ -305,156 +309,271 @@ const peopleInput = document.getElementById("people");
 const paymentType = document.getElementById("paymentType");
 const totalPrice = document.getElementById("totalPrice");
 
+const trekkingNote = document.getElementById("trekkingNote");
+const pickupField = document.querySelector(".pickup-field");
+
+const payNow = document.getElementById("payNow");
+
 let basePrice = 0;
+
+// USD hanya reference
 const exchangeRate = 16000;
 
-// ketika pilih tour
+// =========================
+// PILIH TOUR
+// =========================
 tourSelect.addEventListener("change", function () {
 
-  const selected = tourSelect.options[tourSelect.selectedIndex];
-  basePrice = parseInt(selected.getAttribute("data-price")) || 0;
+  const selected =
+    tourSelect.options[tourSelect.selectedIndex];
+
+  basePrice =
+    parseInt(selected.getAttribute("data-price")) || 0;
+
+  const selectedText = selected.text;
+
+  // ===== TREKKING NOTE =====
+  if (selectedText.includes("Ricefield Trekking")) {
+
+    trekkingNote.style.display = "block";
+    pickupField.style.display = "none";
+
+  } else {
+
+    trekkingNote.style.display = "none";
+    pickupField.style.display = "block";
+
+  }
 
   calculateTotal();
 
 });
 
-// ketika ubah jumlah orang
+// =========================
+// INPUT EVENTS
+// =========================
 peopleInput.addEventListener("input", calculateTotal);
 
-// ketika ubah tipe pembayaran
 paymentType.addEventListener("change", calculateTotal);
 
+// =========================
+// CALCULATE TOTAL
+// =========================
 function calculateTotal() {
 
-  const people = parseInt(peopleInput.value) || 1;
+  const people =
+    parseInt(peopleInput.value) || 1;
 
   let totalIDR = basePrice * people;
 
-  // ===== DISCOUNT 10% jika 2 orang atau lebih =====
+  // ===== GROUP DISCOUNT =====
   let discount = 0;
 
   if (people >= 2) {
+
     discount = totalIDR * 0.10;
+
     totalIDR = totalIDR - discount;
+
   }
 
-  // ===== PAYMENT TYPE =====
+  // ===== DEPOSIT =====
   if (paymentType.value === "deposit") {
+
     totalIDR = totalIDR * 0.5;
+
   }
 
-  const totalUSD = (totalIDR / exchangeRate).toFixed(2);
+  // ===== USD REFERENCE =====
+  const totalUSD =
+    (totalIDR / exchangeRate).toFixed(2);
+
+  // ===== FORMAT IDR =====
+  const formattedIDR =
+    totalIDR.toLocaleString("id-ID");
 
   // ===== DISPLAY =====
   if (people >= 2) {
-    totalPrice.innerText = "10% Group Discount Applied | Total: $" + totalUSD + " USD";
+
+    totalPrice.innerHTML = `
+    
+      <div style="font-size:28px;font-weight:bold;color:#111;">
+        IDR ${formattedIDR}
+      </div>
+
+      <div style="font-size:14px;color:gray;margin-top:4px;">
+        ≈ $${totalUSD} USD (reference only)
+      </div>
+
+      <div style="font-size:14px;color:green;font-weight:bold;margin-top:6px;">
+        10% Group Discount Applied
+      </div>
+
+    `;
+
   } else {
-    totalPrice.innerText = "Total: $" + totalUSD + " USD";
+
+    totalPrice.innerHTML = `
+    
+      <div style="font-size:28px;font-weight:bold;color:#111;">
+        IDR ${formattedIDR}
+      </div>
+
+      <div style="font-size:14px;color:gray;margin-top:4px;">
+        ≈ $${totalUSD} USD (reference only)
+      </div>
+
+    `;
+
   }
 
 }
 
-</script>
-
-<script>
-
-const trekkingNote = document.getElementById("trekkingNote");
-const pickupField = document.querySelector(".pickup-field");
-
-tourSelect.addEventListener("change", function(){
-
-const selectedText = tourSelect.options[tourSelect.selectedIndex].text;
-
-if(selectedText.includes("Ricefield Trekking")){
-
-trekkingNote.style.display = "block";
-pickupField.style.display = "none";
-
-}else{
-
-trekkingNote.style.display = "none";
-pickupField.style.display = "block";
-
-}
-
-});
-
-</script>
-
-<script>
-
-const payNow = document.getElementById("payNow");
-
+// =========================
+// PAY NOW
+// =========================
 payNow.addEventListener("click", function(){
 
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const tourSelect = document.getElementById("tourSelect");
-const tour = tourSelect.options[tourSelect.selectedIndex].text;
+  const name =
+    document.getElementById("name").value;
 
-const date = document.getElementById("date").value;
-const people = parseInt(document.getElementById("people").value) || 1;
-const hotel = document.getElementById("hotel").value;
-const pickupTime = document.getElementById("pickupTime").value;
-const phone = document.getElementById("phone").value;
-const paymentType = document.getElementById("paymentType").value;
+  const email =
+    document.getElementById("email").value;
 
-const price = parseInt(tourSelect.options[tourSelect.selectedIndex].dataset.price);
+  const tour =
+    tourSelect.options[tourSelect.selectedIndex].text;
 
-let totalIDR = price * people;
+  const date =
+    document.getElementById("date").value;
 
-if(paymentType === "deposit"){
-totalIDR = totalIDR * 0.5;
-}
+  const people =
+    parseInt(document.getElementById("people").value) || 1;
 
-const exchangeRate = 16000;
-const totalUSD = (totalIDR / exchangeRate).toFixed(2);
+  const hotel =
+    document.getElementById("hotel").value;
 
-const data = {
+  const pickupTime =
+    document.getElementById("pickupTime").value;
 
-customer_name: name,
-customer_email: email,
-phone: phone,
-tour: tour,
-date: date,
-people: people,
-hotel: hotel,
-pickup_time: pickupTime,
-payment: paymentType,
-amount: totalUSD
+  const phone =
+    document.getElementById("phone").value;
 
-};
+  const payment =
+    document.getElementById("paymentType").value;
 
-// simpan booking
-localStorage.setItem("bookingData", JSON.stringify(data));
+  // =========================
+  // PRICE
+  // =========================
+  const price =
+    parseInt(
+      tourSelect.options[tourSelect.selectedIndex]
+      .dataset.price
+    );
 
-// kirim email owner
-emailjs.send("service_e7hsh38","template_wm84v18",data)
+  let totalIDR = price * people;
 
-.then(function(){
+  // GROUP DISCOUNT
+  if (people >= 2) {
 
-// kirim email customer
-return emailjs.send("service_e7hsh38","template_sgcx2mc",data);
+    totalIDR =
+      totalIDR - (totalIDR * 0.10);
 
-})
+  }
 
-.then(function(){
+  // DEPOSIT
+  if (payment === "deposit") {
 
-window.location.href="booking-success.html";
+    totalIDR = totalIDR * 0.5;
 
-})
+  }
 
-.catch(function(error){
+  // USD reference
+  const totalUSD =
+    (totalIDR / exchangeRate).toFixed(2);
 
-console.log("EMAIL FAILED:",error);
+  // format IDR
+  const formattedIDR =
+    totalIDR.toLocaleString("id-ID");
 
-window.location.href="booking-success.html";
+  // =========================
+  // DATA
+  // =========================
+  const data = {
 
-});
+    customer_name: name,
+    customer_email: email,
+
+    phone: phone,
+
+    tour: tour,
+
+    date: date,
+
+    people: people,
+
+    hotel: hotel,
+
+    pickup_time: pickupTime,
+
+    payment: payment,
+
+    // MAIN PRICE
+    amount_idr: formattedIDR,
+
+    // USD REFERENCE
+    amount_usd: totalUSD
+
+  };
+
+  // =========================
+  // SAVE BOOKING
+  // =========================
+  localStorage.setItem(
+    "bookingData",
+    JSON.stringify(data)
+  );
+
+  // =========================
+  // SEND EMAIL OWNER
+  // =========================
+  emailjs.send(
+    "service_e7hsh38",
+    "template_wm84v18",
+    data
+  )
+
+  .then(function(){
+
+    // =========================
+    // SEND EMAIL CUSTOMER
+    // =========================
+    return emailjs.send(
+      "service_e7hsh38",
+      "template_sgcx2mc",
+      data
+    );
+
+  })
+
+  .then(function(){
+
+    window.location.href =
+      "booking-success.html";
+
+  })
+
+  .catch(function(error){
+
+    console.log("EMAIL FAILED:", error);
+
+    // tetap redirect
+    window.location.href =
+      "booking-success.html";
+
+  });
 
 });
 
 </script>
-
 </body>
 </html>
