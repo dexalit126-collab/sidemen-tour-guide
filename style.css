@@ -2068,124 +2068,574 @@ height:280px;
   background: #1ebe5d;
 }
 
-/* HERO CONTAINER */
-.lunch-hero {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  min-height: 500px;
-  overflow: hidden;
+/* MOBILE */
+@media (max-width:768px){
+
+    .hero-text-section{
+        padding:60px 20px 40px;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .seo-subtitle{
+        font-size:1.1rem;
+        line-height:1.5;
+        margin-top:12px;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .lunch-content{
+        padding:40px 20px;
+    }
+
+    .lunch-content h2{
+        font-size:1.8rem;
+    }
+
+    .lunch-content h3{
+        font-size:1.3rem;
+        margin-top:35px;
+    }
+
+    .lunch-content p,
+    .lunch-content li{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .highlight-text{
+        font-size:1.05rem;
+        padding:18px;
+    }
+
+    .booking-info{
+        padding:20px;
+    }
+
+    .cta-button,
+    .book-btn,
+    .secondary-btn{
+        width:100%;
+        text-align:center;
+        padding:15px 20px;
+        font-size:1rem;
+    }
+
+    .related-experience{
+        padding:35px 20px;
+        text-align:center;
+    }
+
+    .related-experience h2{
+        font-size:1.6rem;
+    }
+
+    .related-experience p{
+        font-size:1rem;
+    }
+
 }
 
-/* SLIDER */
-.slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+/* ==========================================================
+   BALINESE COOKING CLASS
+========================================================== */
+.cooking-hero{
+    background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.55)),
+    url(images/introduce-before-cook.jpg) center center/cover no-repeat;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    padding:40px 20px;
+}
+.hero-tag{
+    display:inline-block;
+    background:#d4a017;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:.9rem;
+    margin-bottom:20px;
+    font-weight:600;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+.cooking-hero h1{
+    text-shadow:0 3px 12px rgba(0,0,0,.6);
 }
 
-.slide.active {
-  opacity: 1;
+.cooking-hero p,
+.cooking-hero h2{
+    text-shadow:0 2px 8px rgba(0,0,0,.6);
 }
 
-/* DARK OVERLAY */
-.lunch-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 1;
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:20px;
 }
 
-/* OVERLAY WRAPPER */
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-content p{
+    max-width:760px;
+    margin:auto;
+    line-height:1.8;
+    font-size:1.1rem;
 }
 
-/* CONTENT BOX (BIAR TIDAK NEMPEL & TIDAK KETUMPUK) */
-.hero-content {
-  text-align: center;
-  color: #fff;
-  max-width: 800px;
-  padding: 20px;
+.hero-highlights{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:30px 0;
 }
 
-/* TEXT FIX */
-.hero-content h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-  line-height: 1.2;
+.hero-highlights span{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(6px);
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:.95rem;
 }
 
-.hero-content h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: 400;
+/* ===================================================== */
+
+.why-us,
+.story-section,
+.menu-section,
+.seasonal-note,
+.included-section,
+.details-section,
+.perfect-for,
+.gallery-section,
+.reviews-section,
+.faq-section,
+.booking-section,
+.related-experience{
+    padding:90px 20px;
 }
 
-.hero-content p {
-  font-size: 16px;
-  margin-bottom: 20px;
+.why-us h2,
+.story-section h2,
+.menu-section h2,
+.seasonal-note h2,
+.included-section h2,
+.details-section h2,
+.perfect-for h2,
+.gallery-section h2,
+.reviews-section h2,
+.faq-section h2,
+.booking-section h2,
+.related-experience h2{
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:20px;
+    color:#222;
 }
 
-/* BUTTON */
-.back-btn {
-  display: inline-block;
-  padding: 10px 18px;
-  background: #fff;
-  color: #000;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
+.why-us>p,
+.story-section p,
+.menu-section>p,
+.seasonal-note p,
+.gallery-section>p,
+.booking-section>p,
+.related-experience>p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.9;
+    text-align:center;
 }
 
-/* SEO INTRO */
-.seo-intro {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-    text-align: center;
+/* ===================================================== */
+
+.feature-grid,
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:50px;
 }
 
-.seo-intro h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.feature-card,
+.menu-item{
+
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-.seo-intro h2 {
-    margin-top: 30px;
-    font-size: 24px;
+.feature-card:hover,
+.menu-item:hover{
+
+    transform:translateY(-8px);
+
 }
 
-.seo-intro p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    opacity: 0.85;
+.feature-card i{
+
+    font-size:2.2rem;
+    color:#d4a017;
+    margin-bottom:18px;
+
 }
 
-.things-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+.feature-card h3,
+.menu-item h3{
+
+    margin-bottom:15px;
+    color:#222;
+
 }
 
-.things-list li {
-    margin: 8px 0;
-    font-size: 16px;
+.feature-card p,
+.menu-item p{
+
+    color:#666;
+    line-height:1.7;
+
 }
 
+/* ===================================================== */
+
+.tour-table{
+
+    width:100%;
+    max-width:850px;
+    margin:40px auto;
+    border-collapse:collapse;
+
+}
+
+.tour-table td{
+
+    border-bottom:1px solid #eee;
+    padding:18px;
+
+}
+
+.tour-table tr:nth-child(even){
+
+    background:#fafafa;
+
+}
+
+/* ===================================================== */
+
+.gallery-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:18px;
+margin-top:45px;
+
+}
+
+.gallery-grid img{
+
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:18px;
+transition:.4s;
+cursor:pointer;
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.04);
+
+}
+
+/* ===================================================== */
+.google-review{
+    overflow:hidden;
+}
+
+.review-slider{
+    display:flex;
+    gap:25px;
+    width:max-content;
+    animation:slideReview 25s linear infinite;
+}
+
+.review-slider:hover{
+    animation-play-state:paused;
+}
+
+.review-card{
+    flex:0 0 380px;
+}
+
+@keyframes slideReview{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+/* ===================================================== */
+
+.faq-item{
+
+max-width:900px;
+margin:18px auto;
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+}
+
+.faq-item h3{
+
+margin-bottom:12px;
+color:#222;
+
+}
+
+.faq-item p{
+
+line-height:1.8;
+color:#666;
+
+}
+
+/* ===================================================== */
+
+.booking-section{
+
+background:#f8f6ef;
+text-align:center;
+
+}
+
+.booking-section .btn-primary{
+
+display:inline-block;
+margin-top:30px;
+
+}
+
+/* ===================================================== */
+
+.related-experience{
+
+background:#fafafa;
+text-align:center;
+
+}
+
+.related-experience .btn-primary{
+
+margin-top:25px;
+display:inline-block;
+
+}
+
+/* ===================================================== */
+
+@media(max-width:768px){
+
+.hero-content h1{
+
+font-size:2.2rem;
+
+}
+
+.hero-content p{
+
+font-size:1rem;
+
+}
+
+.hero-highlights{
+
+flex-direction:column;
+
+}
+
+.gallery-grid img{
+
+height: 20px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE (MAX 768px)
+========================================== */
+
+@media (max-width:768px){
+
+/* General */
+
+section{
+    padding:60px 18px;
+}
+
+h1{
+    font-size:2.2rem;
+    line-height:1.3;
+}
+
+h2{
+    font-size:1.8rem !important;
+    line-height:1.4;
+}
+
+h3{
+    font-size:1.2rem;
+}
+
+p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* Hero */
+
+.hero-content{
+    width:100%;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:30px;
+    align-items:center;
+}
+
+.hero-buttons a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    max-width:320px;
+
+    padding:15px 20px;
+    box-sizing:border-box;
+
+    text-align:center;
+    text-decoration:none;
+}
+
+
+
+.hero-highlights{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+}
+
+.hero-highlights span{
+    width:100%;
+}
+
+/* Cards */
+
+.feature-grid,
+.menu-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.feature-card,
+.menu-item{
+
+    padding:25px 20px;
+
+}
+
+/* Timeline */
+
+.timeline{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+.timeline div{
+
+padding:20px;
+
+}
+
+
+/* Gallery */
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+gap:15px;
+
+}
+
+.gallery-grid img{
+
+height:230px;
+
+}
+
+/* Reviews */
+
+.review-card{
+
+padding:25px 20px;
+
+}
+
+/* FAQ */
+
+.faq-item{
+
+padding:20px;
+
+}
+
+.faq-item h3{
+
+font-size:18px;
+
+}
+
+/* WhatsApp */
+
+.floating-wa-pro{
+
+width:60px;
+height:60px;
+font-size:26px;
+
+}
+
+.wa-tooltip{
+
+display:none;
+
+}
+
+}
