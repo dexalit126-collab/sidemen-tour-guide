@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidemen Bali Travel Blog | Local Tips & Authentic Experiences</title>
+  <meta name="description" content="Explore Sidemen, Bali with local travel tips from Sidemen Tour Guide. Discover rice field trekking, Balinese culture, temple purification, scooter tours and local food.">
+  <link rel="canonical" href="https://sidementourguide.com/blog/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sidemen Tour Guide">
+  <meta property="og:title" content="Sidemen Bali Travel Blog | Local Tips & Authentic Experiences">
+  <meta property="og:description" content="Explore Sidemen, Bali with local travel tips from Sidemen Tour Guide. Discover rice field trekking, Balinese culture, temple purification, scooter tours and local food.">
+  <meta property="og:url" content="https://sidementourguide.com/blog/">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../lunch.css">
+  <link rel="stylesheet" href="../desktop-fix.css">
+  <link rel="stylesheet" href="blog.css">
+  <link rel="icon" href="../images/logo.png">
+</head>
+<body class="blog-page">
+<header>
+  <div class="container nav blog-nav">
+    <a class="logo blog-logo" href="../index.html" aria-label="Sidemen Tour Guide home"><img src="../images/logo.png" alt="Sidemen Tour Guide logo"></a>
+    <nav id="navMenu" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../tours.html">Tours</a>
+      <a href="../authentic-local-lunch.html">Home Dining</a>
+      <a href="../transport-scooter-rental-sidemen.html">Transport</a>
+      <a href="index.html" aria-current="page">Blog</a>
+      <a href="../About.html">About</a>
+      <a href="../Contact.html">Contact</a>
+    </nav>
+    <button class="blog-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <span class="eyebrow">Local stories • Travel inspiration • Sidemen, Bali</span>
+    <h1>Discover the Authentic Side of Sidemen</h1>
+    <p>Travel ideas, local culture and experiences from the people who call Sidemen home.</p>
+  </div>
+</section>
+
+<main class="blog-wrap">
+  <section class="blog-intro">
+    <h2>Sidemen Travel Guide & Stories</h2>
+    <p>Welcome to the Sidemen Tour Guide blog. Find inspiration for exploring the rice fields, learning about Balinese culture, tasting local food and discovering a quieter side of Bali.</p>
+  </section>
+
+  <section class="blog-grid" aria-label="Latest travel articles">
+    <article class="blog-card">
+      <a href="5-best-things-to-do-in-sidemen-bali/" aria-label="Read 5 Best Things to Do in Sidemen Bali">
+        <img src="../images/sidemen.jpg" alt="Green landscapes in Sidemen, Bali" loading="lazy">
+      </a>
+      <div class="blog-card-body">
+        <p class="eyebrow" style="color:#8a7442">Discover Sidemen</p>
+        <h2><a class="blog-read" href="5-best-things-to-do-in-sidemen-bali/">5 Best Things to Do in Sidemen Bali</a></h2>
+        <p>From walking through rice fields to sharing a meal in a local home, discover five meaningful ways to experience Sidemen.</p>
+        <a class="blog-read" href="5-best-things-to-do-in-sidemen-bali/">Read the guide →</a>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="blog-footer">
+  <strong>Sidemen Tour Guide</strong>
+  <p>Authentic local experiences in Sidemen, Bali.</p>
+  <p><a href="../sidemen-tour-guide/index.html">Home</a> · <a href="../tours.html">Tours</a> · <a href="../Contact.html">Contact</a></p>
+  <small>© 2026 Sidemen Tour Guide. All rights reserved.</small>
+</footer>
+
+<div class="wa-wrapper">
+  <div class="wa-tooltip" id="waTooltip">👋 Need help?<br>Chat with us on WhatsApp</div>
+  <a href="https://wa.me/6281936557957?text=Hi%20Sidemen%20Tour%20Guide!%20I%20found%20your%20travel%20blog%20and%20would%20love%20more%20information."
+     class="floating-wa-pro" target="_blank" rel="noopener" aria-label="Chat with Sidemen Tour Guide on WhatsApp"><span class="wa-online"></span>💬</a>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", function () {
+      const isOpen = navMenu.classList.toggle("active");
+      hamburger.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+  const tooltip = document.getElementById("waTooltip");
+  if (tooltip) {
+    setTimeout(() => tooltip.classList.add("show"), 4000);
+    setTimeout(() => tooltip.classList.remove("show"), 30000);
+  }
+});
+</script>
+</body>
+</html>
